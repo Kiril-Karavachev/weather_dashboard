@@ -1,0 +1,28 @@
+<svg class="humidity-animation" width="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color: #646464; stop-opacity: 1" />
+      <stop offset="100%" style="stop-color: #646464; stop-opacity: 0.1" />
+    </linearGradient>
+  </defs>
+  <rect width="299px" height="100%" x="0" y="0" fill="url(#gradient)" />
+  <path d="M0 125 Q50 100, 100 125 T200 125 T300 125 L300 0 L0 0 Z" fill="#fff">
+    <animate attributeName="d" dur="3s" repeatCount="indefinite" values="
+      M0 125 Q50 100, 100 125 T200 125 T300 125 L300 0 L0 0 Z;
+      M0 125 Q50 150, 100 125 T200 125 T300 125 L300 0 L0 0 Z;
+      M0 125 Q50 100, 100 125 T200 125 T300 125 L300 0 L0 0 Z"
+    />
+  </path>
+</svg>
+
+<style>
+.humidity-animation {
+	height: 90%;
+	width: 300px;
+	max-width: 302px;
+	transform-origin: bottom;
+	position: fixed;
+	bottom: 0%;
+	transition: 201ms;
+}
+</style>
