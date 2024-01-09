@@ -1,0 +1,234 @@
+<link rel="stylesheet" href="prototype.css"/>
+<div id="background-texture"></div>
+<div id="dashboard-background">
+	<main id="dashboard-wrapper-grid">
+		<section id="current-temp-date-and-time-wrapper">
+			<div id="current-temp-tile" class="has-border linear-gradient-back-45-deg shadow-drop">
+				<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/clearSunnyDay.png"/>
+				<span id="current-temp-digit">25°C</span>
+			</div>
+			<div id="hourly-temp-graph" class="hourly-temp-graph-hidden linear-gradient-back-45-deg shadow-drop">
+				<div class="hourly-temp">
+					<span class="hourly-temp-is"></span>
+					<div class="hourly-temp-candle-box">
+						<div class="hourly-temp-candle has-border""></div>
+					</div>
+					<span class="hourly-temp-hour-is"></span>
+				</div>
+				<div class="hourly-temp">
+					<span class="hourly-temp-is"></span>
+					<div class="hourly-temp-candle-box">
+						<div class="hourly-temp-candle has-border"></div>
+					</div>
+					<span class="hourly-temp-hour-is"></span>
+				</div>
+				<div class="hourly-temp">
+					<span class="hourly-temp-is"></span>
+					<div class="hourly-temp-candle-box">
+						<div class="hourly-temp-candle has-border"></div>
+					</div>
+					<span class="hourly-temp-hour-is"></span>
+				</div>
+				<div class="hourly-temp">
+					<span class="hourly-temp-is"></span>
+					<div class="hourly-temp-candle-box">
+						<div class="hourly-temp-candle has-border"></div>
+					</div>
+					<span class="hourly-temp-hour-is"></span>
+				</div>
+				<div class="hourly-temp">
+					<span class="hourly-temp-is"></span>
+					<div class="hourly-temp-candle-box">
+						<div class="hourly-temp-candle has-border"></div>
+					</div>
+					<span class="hourly-temp-hour-is"></span>
+				</div>
+				<div class="hourly-temp">
+					<span class="hourly-temp-is"></span>
+					<div class="hourly-temp-candle-box">
+						<div class="hourly-temp-candle has-border"></div>
+					</div>
+					<span class="hourly-temp-hour-is"></span>
+				</div>
+				<div class="hourly-temp">
+					<span class="hourly-temp-is"></span>
+					<div class="hourly-temp-candle-box">
+						<div class="hourly-temp-candle has-border"></div>
+					</div>
+					<span class="hourly-temp-hour-is"></span>
+				</div>
+				<div class="hourly-temp">
+					<span class="hourly-temp-is"></span>
+					<div class="hourly-temp-candle-box">
+						<div class="hourly-temp-candle has-border"></div>
+					</div>
+					<span class="hourly-temp-hour-is"></span>
+				</div>
+				<div id="hourly-temp-graph-x-axis-line">
+			</div>
+			</div>
+			<div id="date-and-time-tile" class="has-border linear-gradient-back-45-deg shadow-drop">
+				<div id="date-data">
+					<span id="current-day-of-the-week">Monday</span>
+					<span id="current-day-and-month">06 JAN</span>
+					<span id="current-year">2024</span>
+					<span id="current-time">13:16</span>
+				</div>
+			</div>
+		</section>
+		<input id="search-location-bar" class="has-border linear-gradient-back-180-deg shadow-drop" type="text" placeholder="Search location..."/>
+		<section id="current-location-wrapper">
+			<span id="current-city">Sofia,</span>
+			<span id="current-country">Bulgaria</span>
+		</section>
+		<section id="sun-state-wrapper" class="has-border linear-gradient-back-180-deg shadow-drop">
+			<div id="sunrise-info-wrapper" class="sun-info-text">
+				<span id="sunrise-info-title">Sunrise:</span>
+				<span id="sunrise-info-time">07:57</span>
+			</div>
+			<div id="sun-or-moon-path" class="has-border">
+				<img id="sun-or-moon-icon" alt="A sun or a moon icon." src="../weather_dashboard/src/icons/sunIcon.png"/>
+			</div>
+			<div id="sunset-info-wrapper" class="sun-info-text">
+				<span id="sunset-info-title">Sunset:</span>
+				<span id="sunset-info-time">17:08</span>
+			</div>
+		</section>
+		<section id="five-day-forecast-wrapper" class="linear-gradient-back-45-deg shadow-drop has-border">
+			<span id="the-next-five-days-title" class="has-border linear-gradient-back-180-deg shadow-drop">the next 5 days</span>
+			<div class="day-plus-wrapper has-border linear-gradient-back-180-deg shadow-drop">
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/lessCloudySunnyDay.png"/>
+				<span class="day-plus-max-temp">+24°/</span>
+				<span class="day-plus-min-temp">+15°</span>
+				<span class="day-plus-day-and-month-are">07 JAN,</span>
+				<span class="day-plus-day-of-the-week-is"> Tuesday</span>
+			</div>
+			<div class="day-plus-wrapper has-border linear-gradient-back-180-deg shadow-drop">
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/cloudySunnyDay.png"/>
+				<span class="day-plus-max-temp">+23°/</span>
+				<span class="day-plus-min-temp">+11°</span>
+				<span class="day-plus-day-and-month-are">08 JAN,</span>
+				<span class="day-plus-day-of-the-week-is"> Wednesday</span>
+			</div>
+			<div class="day-plus-wrapper has-border linear-gradient-back-180-deg shadow-drop">
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/cloudySunnyDay.png"/>
+				<span class="day-plus-max-temp">+20°/</span>
+				<span class="day-plus-min-temp">+7°</span>
+				<span class="day-plus-day-and-month-are">09 JAN,</span>
+				<span class="day-plus-day-of-the-week-is"> Thursday</span>
+			</div>
+			<div class="day-plus-wrapper has-border linear-gradient-back-180-deg shadow-drop">
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/cloudyDay.png"/>
+				<span class="day-plus-max-temp">+21°/</span>
+				<span class="day-plus-min-temp">+9°</span>
+				<span class="day-plus-day-and-month-are">10 JAN,</span>
+				<span class="day-plus-day-of-the-week-is"> Friday</span>
+			</div>
+			<div class="day-plus-wrapper has-border linear-gradient-back-180-deg shadow-drop">
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/rainySunnyDay.png"/>
+				<span class="day-plus-max-temp">+18°/</span>
+				<span class="day-plus-min-temp">+6°</span>
+				<span class="day-plus-day-and-month-are">11 JAN,</span>
+				<span class="day-plus-day-of-the-week-is"> Saturday</span>
+			</div>
+		</section>
+		<section id="other-weather-data-wrapper" class="has-border linear-gradient-back-45-deg shadow-drop">
+			<div id="wind-tile" class="other-tile shadow-drop has-border">
+				<button id="back-button-wind" class="back-button has-border">
+					<img class="back-button-arrow" alr="Back button arrow." src=""/>
+				</button>
+				<div id="wind-graph" class="weather-graph">
+					<div class="wind-speed-column">
+						<span class="wind-speed-will-be"></span>
+						<div class="wind-speed-index-box">
+							<div class="wind-speed-index"></div>
+						</div>
+						<span class="wind-hour-is"></span>
+					</div>
+					<div class="wind-speed-column">
+						<span class="wind-speed-will-be"></span>
+						<div class="wind-speed-index-box">
+							<div class="wind-speed-index"></div>
+						</div>
+						<span class="wind-hour-is"></span>
+					</div>
+					<div class="wind-speed-column">
+						<span class="wind-speed-will-be"></span>
+						<div class="wind-speed-index-box">
+							<div class="wind-speed-index"></div>
+						</div>
+						<span class="wind-hour-is"></span>
+					</div>
+					<div class="wind-speed-column">
+						<span class="wind-speed-will-be"></span>
+						<div class="wind-speed-index-box">
+							<div class="wind-speed-index"></div>
+						</div>
+						<span class="wind-hour-is"></span>
+					</div>
+					<div class="wind-speed-column">
+						<span class="wind-speed-will-be"></span>
+						<div class="wind-speed-index-box">
+							<div class="wind-speed-index"></div>
+						</div>
+						<span class="wind-hour-is"></span>
+					</div>
+					<div class="wind-speed-column">
+						<span class="wind-speed-will-be"></span>
+						<div class="wind-speed-index-box">
+							<div class="wind-speed-index"></div>
+						</div>
+						<span class="wind-hour-is"></span>
+					</div>
+					<div id="wind-graph-x-axis-line"></div>
+				</div>
+				<div id="current-wind-speed-data" class="other-weather-data-basic-data-wrapper">
+					<span id="current-wind-speed-number" class="other-weather-data-number">5</span>
+					<span id="current-wind-speed-units" class="other-weather-data-units">km/h</span>
+					<span id="wind-tile-title" class="other-data-tile-title">Wind</span>
+				</div>
+			</div>
+			<div id="uv-tile" class="other-tile shadow-drop has-border">
+				<div id="uv-tile-bar" class="other-tile-bar"></div>
+				<button id="back-button-uv" class="back-button has-border">
+					<img class="back-button-arrow" alr="Back button arrow." src=""/>
+				</button>
+				<div id="uv-graph" class="weather-graph">
+					<!--<svg></svg>-->
+				</div>
+				<div id="current-uv-data" class="other-weather-data-basic-data-wrapper">
+					<span id="current-uv-number" class="other-weather-data-number">5.50</span>
+					<span id="current-uv-units" class="other-weather-data-units">uv</span>
+					<span id="uv-tile-title" class="other-data-tile-title">UV</span>
+				</div>
+			</div>
+			<div id="humidity-tile" class="other-tile shadow-drop has-border">
+				<div id="humidity-tile-bar" class="other-tile-bar"></div>
+				<button id="back-button-humidity" class="back-button">
+					<img class="back-button-arrow" alr="Back button arrow." src=""/>
+				</button>
+				<div id="humidity-graph" class="weather-graph">
+					<!--<svg></svg>-->
+				</div>
+				<div id="current-humidity-data" class="other-weather-data-basic-data-wrapper">
+					<span id="current-humidity-number" class="other-weather-data-number">83</span>
+					<span id="current-humidity-units" class="other-weather-data-units">%</span>
+					<span id="humidity-tile-title" class="other-data-tile-title">Humidity</span>
+				</div>
+			</div>
+			<div id="visibility-tile" class="other-tile shadow-drop has-border">
+				<button id="back-button-visibility" class="back-button">
+					<img class="back-button-arrow" alr="Back button arrow." src=""/>
+				</button>
+				<div id="visibility-graph" class="weather-graph">
+					<!--<svg></svg>-->
+				</div>
+				<div id="current-visibility-data" class="other-weather-data-basic-data-wrapper">
+					<span id="current-visibility-number" class="other-weather-data-number">3</span>
+					<span id="current-visibility-units" class="other-weather-data-units">km</span>
+					<span id="visibility-tile-title" class="other-data-tile-title">Visibility</span>
+				</div>			
+			</div>
+		</section>
+	</main>
+</div>
