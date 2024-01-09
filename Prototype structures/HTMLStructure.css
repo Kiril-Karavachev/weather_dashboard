@@ -9,12 +9,29 @@
 	--text-color: #B9B9B9;
 	--text-color-transparent: #b9b9b980;
 	--shadow-color: #00000080;
+	--shadow-drop: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	--box-color-transparent: #0000001a;
+	--bar-background-color: linear-gradient(180deg, rgba(100, 100, 100, 0.50) 0%, rgba(100, 100, 100, 0.08) 100%);
 	--tile-background-color: linear-gradient(135deg, #00000040 51%, #00000000 100%);
-	--sun-track-background: linear-gradient(270deg, #00000040 0%, #00000000 100%);
+	--horizontal-bar-background: linear-gradient(270deg, #00000040 0%, #00000000 100%);
 	--other-weather-tile-bar-color: linear-gradient(180deg, #64646480 0%, #64646414 100%);
 	--dashboard-background: linear-gradient(107deg, #686868 0%, #5A5A5A 30.36%, #151515 64.2%);
 }
+
+
+::-webkit-scrollbar {
+	width: 0px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+	background: transparent;
+  }
+  
+
+  ::-webkit-scrollbar-thumb {
+	background: transparent;
+  }
 
 *
 {
@@ -22,13 +39,21 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Red Hat Display', sans-serif;
+	cursor:default;
 }
 
 span
 {
 	-webkit-text-stroke-width: 0.5px; 
     -webkit-text-stroke-color: var(--stroke-color);
-	color: var(--text-color); 
+	text-shadow: 2px 2px var(--shadow-color);
+	color: var(--text-color);
+	display: inline-block;
+}
+
+input
+{
+	color: var(--text-color);
 }
 
 ::-ms-input-placeholder
@@ -45,11 +70,41 @@ span
 	color: var(--text-color); 
 }
 
+.other-tile-bar
+{
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	width: 100%;
+	background: var(--bar-background-color);
+}
+
 .has-border
 {
 	border-radius: 20px;
 	border: solid 1px var(--stroke-color);
 }
+
+.back-button
+{
+	display: none;
+}
+
+.shadow-drop
+{
+	box-shadow: var(--shadow-drop);
+}
+
+.linear-gradient-back-45-deg
+{
+	background: var(--tile-background-color);
+}
+
+.linear-gradient-back-180-deg
+{
+	background: var(--horizontal-bar-background);
+}
+
 
 #dashboard-background
 {
@@ -58,6 +113,21 @@ span
 	align-items: center;
 	align-content: center;
 	top: 0%;
+}
+
+#background-texture::before
+{
+	position: fixed;
+	content: "";
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	top: 0%;
+	background-image: url(../weather_dashboard/src/images/leatherTexture.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.3;
 }
 
 #dashboard-background::before
@@ -74,13 +144,137 @@ span
 {
 	display: grid;
 	max-width: 1200px !important;
-	max-height: 700px !important;
+	max-height: 720px !important;
 	overflow: hidden;
+	transform: scale(0.8);
 }
 
+#current-temp-date-and-time-wrapper
+{
+	display: flex;
+}
+
+#current-temp-digit
+{
+	transform: translateY(50%);
+}
+
+.hourly-temp-graph-hidden
+{
+	display: none;
+}
+
+#sun-state-wrapper,
+#sun-or-moon-path
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+#sun-or-moon-path
+{
+	align-items: center;
+	align-content: center;
+	justify-content: unset !important;
+}
+
+#five-day-forecast-wrapper
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	gap: 8px;
+	overflow-y: scroll;
+}
+
+#the-next-five-days-title,
+.day-plus-wrapper
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	padding-left: 5px;
+}
+
+#the-next-five-days-title
+{
+	border-bottom-right-radius: 0 !important;
+}
+
+.day-plus-day-of-the-week-is::before
+{
+	content: "\00a0";
+}
+
+#other-weather-data-wrapper
+{
+	display: grid;
+	grid-template-areas: 
+	"a b"
+	"c d";
+}
+
+.other-tile
+{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+}
+
+.other-weather-data-basic-data-wrapper *
+{
+	text-align: center;
+}
+
+.other-weather-data-basic-data-wrapper
+{
+	transform: translateY(40%);
+}
+
+.other-data-tile-title
+{
+	display: block;
+}
+
+#wind-tile
+{
+	grid-area: a;
+}
+
+#uv-tile
+{
+	grid-area: b;
+}
+
+#humidity-tile
+{
+	grid-area: c;
+}
+
+#visibility-tile
+{
+	grid-area: d;
+}
 
 @media (min-width: 801px) and (orientation: landscape)
 {
+	::-ms-input-placeholder
+	{
+		font-size: 16px;
+	}	
+
+	::placeholder
+	{
+		font-size: 16px;
+	}
+
 	#dashboard-wrapper-grid
 	{
 		min-width: 1200px;
@@ -91,39 +285,214 @@ span
 		"a d"
 		"e d"
 		"f d";
+		gap: 10px;
+		padding: 20px;
 	}
 
 	#current-temp-date-and-time-wrapper
 	{
 		grid-area: a;
+		width: 566px;
+		height: 271px;
+		flex-direction: row;
+		gap: 24px;
 	}
 
 	#search-location-bar
 	{
 		grid-area: b;
+		width: 528px;
+		height: 45px;
+		padding: 10px;
 	}
 
 	#current-location-wrapper
 	{
 		grid-area: c;
+		width: 528px;
+		height: 102px;
+		text-align: right;
 	}
 
 	#other-weather-data-wrapper
 	{
 		grid-area: d;
+		width: 528px;
+		height: 528px;
 	}
 
 	#sun-state-wrapper
 	{
 		grid-area: e;
+		width: 566px;
+		height: 48px;
+		gap: 16px;
+	}
+
+	.sun-info-text
+	{
+		font-size: 16px;
 	}
 
 	#five-day-forecast-wrapper
 	{
-		grid-area: d;
+		grid-area: f;
+		width: 566px;
+		height: 349px;
+		padding: 5px;
 	}
 
+	#current-temp-tile,
+	#date-and-time-tile
+	{
+		width: 271px;
+		height: 271px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
 
+	#current-temp-digit
+	{
+		font-size: 64px;
+	}
+
+	#current-weather-icon
+	{
+		position: absolute;
+		top: calc((271px - 250px)/2);
+		width: 270px;
+		height: auto;
+	}
+
+	#date-data *
+	{
+		display: block;
+		margin: auto;
+		text-align: center;
+	}
+
+	#current-day-of-the-week,
+	#current-year
+	{
+		font-size: 18px;
+	}
+
+	#current-day-and-month
+	{
+		font-size: 28px;
+	}
+
+	#current-time
+	{
+		font-size: 64px;
+	}
+
+	#current-city
+	{
+		font-size: 64px;
+	}
+
+	#current-country
+	{
+		font-size: 52px;
+	}
+
+	.sun-info-text
+	{
+		width: 105px;
+		height: 22px;
+	}
+
+	#sun-or-moon-path
+	{
+		width: 298px;
+		height: 22px;
+	}
+
+	#sun-or-moon-icon
+	{
+		width: 31px;
+		height: 31px;
+		margin-left: 60%;
+	}
+
+	#the-next-five-days-title
+	{
+		width: 555px;
+		height: 48px;
+		margin-bottom: 17px;
+	}
+
+	.day-plus-wrapper
+	{
+		width: 554px;
+		height: 46px;
+	}
+
+	#the-next-five-days-title,
+	.day-plus-wrapper 
+	{
+		padding-left: 10px;
+	}
+
+	.day-plus-wrapper .day-plus-max-temp,
+	.day-plus-wrapper .day-plus-day-and-month-are
+	{
+		margin-left: 15px;
+	}
+
+	.day-plus-icon
+	{
+		width: 45px;
+		height: auto;
+	}
+
+	.day-plus-max-temp
+	{
+		font-size: 24px;
+	}
+
+	.day-plus-min-temp,
+	.day-plus-day-and-month-are
+	{
+		font-size: 18px;
+	}
+
+	.day-plus-day-of-the-week-is
+	{
+		font-size: 16px;
+	}
+
+	.other-tile
+	{
+		width: 196px;
+		height: 196px;
+		margin: auto;
+	}
+
+	#uv-tile-bar
+	{
+		height: 55%;
+	}
+
+	#humidity-tile-bar
+	{
+		height: 83%;
+	}
+
+	.other-weather-data-number
+	{
+		font-size: 64px;
+	}
+
+	.other-weather-data-units,
+	.other-data-tile-title
+	{
+		font-size: 24px;
+	}
 
 }
 
