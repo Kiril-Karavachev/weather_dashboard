@@ -1,0 +1,241 @@
+<Background>
+	<CurrentTemperatureDateAndTime>
+		<CurrentTemperatureTile>
+			<CurrentTemperatureIcon />
+			<CurrentTemperatureDigits />
+			<BackButton/>
+			<HourlyTempGraphWrapper>
+				<HourlyTemp key=1>
+					<HourlyTempIs />
+					<HourlyTempCandleBox>
+						<HourlyTempCandle />
+					</HourlyTempCandleBox>
+					<HourlyTempHourIs />
+				</HourlyTempCandleWrapper>
+				<HourlyTemp key=2>
+					<HourlyTempIs />
+					<HourlyTempCandleBox>
+						<HourlyTempCandle />
+					</HourlyTempCandleBox>
+					<HourlyTempHourIs />
+				</HourlyTempCandleWrapper>
+				<HourlyTemp key=3>
+					<HourlyTempIs />
+					<HourlyTempCandleBox>
+						<HourlyTempCandle />
+					</HourlyTempCandleBox>
+					<HourlyTempHourIs />
+				</HourlyTempCandleWrapper>
+				<HourlyTemp key=4>
+					<HourlyTempIs />
+					<HourlyTempCandleBox>
+						<HourlyTempCandle />
+					</HourlyTempCandleBox>
+					<HourlyTempHourIs />
+				</HourlyTempCandleWrapper>
+				<HourlyTemp key=5>
+					<HourlyTempIs />
+					<HourlyTempCandleBox>
+						<HourlyTempCandle />
+					</HourlyTempCandleBox>
+					<HourlyTempHourIs />
+				</HourlyTempCandleWrapper>
+				<HourlyTemp key=6>
+					<HourlyTempIs />
+					<HourlyTempCandleBox>
+						<HourlyTempCandle />
+					</HourlyTempCandleBox>
+					<HourlyTempHourIs />
+				</HourlyTempCandleWrapper>
+				<HourlyTemp key=7>
+					<HourlyTempIs />
+					<HourlyTempCandleBox>
+						<HourlyTempCandle />
+					</HourlyTempCandleBox>
+					<HourlyTempHourIs />
+				</HourlyTempCandleWrapper>
+				<HourlyTemp key=8>
+					<HourlyTempIs />
+					<HourlyTempCandleBox>
+						<HourlyTempCandle />
+					</HourlyTempCandleBox>
+					<HourlyTempHourIs />
+				</HourlyTempCandleWrapper>
+				<HourlyTempGraphXAxisLine />
+			</HourlyTempGraphWrapper>
+		</CurrentTemperatureTile>
+		<DateAndTimeTile>
+			<DateData>
+				<CurrentDayOfWeek />
+				<CurrentDayAndMonth />
+				<CurrentTime>
+			</DateData>
+		</DateAndTimeTile>
+	</CurrentTemperatureDateAndTime>
+	<SearchLocationBar />
+	<CurrentLocationWraper>
+		<CurrentCityText />
+		<CurrentCountryText />
+	</CurrentLocationWraper>
+	<SunStateWrapper>
+		<SunriseDataWrapper>
+			<SunriseInfoWrapper>
+				<SunriseInfoTitle>
+					Sunrise:
+				</SunriseInfoTitle>
+				<SunriseInfoTime />
+			</SunriseInfoWrapper>
+			<SunMoonPath>
+				<SunMoonIcon/>
+			</SunMoonPath>
+			<SunsetInfoTitle>
+				<SunsetInfoTitle>
+					Sunset:
+				</SunsetInfoTitle>
+				<SunsetInfoTime />
+			</SunsetInfoTitle>
+		</SunriseDataWrapper>
+	</SunStateWrapper>
+	<FifeDayForecastWrapper>
+		<TheNextFiveDaysTitle />
+		<DayPlusWrapper key=1>
+			<DayPlusIcon/>
+			<DayPlusMaxTemp/>
+			<DayPlusMinTemp/>
+			<DayPlusDayAndMonthIs/>
+			<DayPlusDayOfTheWeekIs/>
+		</DayPlusWrapper>
+		<DayPlusWrapper key=2>
+			<DayPlusIcon/>
+			<DayPlusMaxTemp/>
+			<DayPlusMinTemp/>
+			<DayPlusDayAndMonthIs/>
+			<DayPlusDayOfTheWeekIs/>
+		</DayPlusWrapper>
+		<DayPlusWrapper key=3>
+			<DayPlusIcon/>
+			<DayPlusMaxTemp/>
+			<DayPlusMinTemp/>
+			<DayPlusDayAndMonthIs/>
+			<DayPlusDayOfTheWeekIs/>
+		</DayPlusWrapper>
+		<DayPlusWrapper key=4>
+		<DayPlusIcon/>
+			<DayPlusMaxTemp/>
+			<DayPlusMinTemp/>
+			<DayPlusDayAndMonthIs/>
+			<DayPlusDayOfTheWeekIs/>
+		</DayPlusWrapper>
+		<DayPlusWrapper key=5>
+		<DayPlusIcon/>
+			<DayPlusMaxTemp/>
+			<DayPlusMinTemp/>
+			<DayPlusDayAndMonthIs/>
+			<DayPlusDayOfTheWeekIs/>
+		</DayPlusWrapper>
+	</FifeDayForecastWrapper>
+	<OtherWeatherDataWrapper>
+		<WindTile>
+			<BackButton />
+			<WindGraph>
+				<WindSpeedColimn key=1>
+					<WindSpeedWillBe />
+					<WindSpeedIndexBox>
+						<WindSpeedIndex />
+					</WindSpeedIndexBox>
+					<WindHourIs />
+				</WindSpeedColimn>
+				<WindSpeedColimn key=2>
+					<WindSpeedWillBe />
+					<WindSpeedIndexBox>
+						<WindSpeedIndex />
+					</WindSpeedIndexBox>
+					<WindHourIs />
+				</WindSpeedColimn>	
+				<WindSpeedColimn key=3>
+					<WindSpeedWillBe />
+					<WindSpeedIndexBox>
+						<WindSpeedIndex />
+					</WindSpeedIndexBox>
+					<WindHourIs />
+				</WindSpeedColimn>	
+				<WindSpeedColimn key=4>
+					<WindSpeedWillBe />
+					<WindSpeedIndexBox>
+						<WindSpeedIndex />
+					</WindSpeedIndexBox>
+					<WindHourIs />
+				</WindSpeedColimn>	
+				<WindSpeedColimn key=5>
+					<WindSpeedWillBe />
+					<WindSpeedIndexBox>
+						<WindSpeedIndex />
+					</WindSpeedIndexBox>
+					<WindHourIs />
+				</WindSpeedColimn>	
+				<WindSpeedColimn key=6>
+					<WindSpeedWillBe />
+					<WindSpeedIndexBox>
+						<WindSpeedIndex />
+					</WindSpeedIndexBox>
+					<WindHourIs />
+				</WindSpeedColimn>
+				<WindGraphXAxisLine />
+			</WindGraph>
+			<CurrentWindSpeedData>
+				<CurrentWindSpeedNumber/>
+				<WindSpeenUnits>
+					km/h
+				</WindSpeenUnits>
+			</CurrentWindSpeedData>
+			<WindTileTitle>
+				Wind
+			</WindTileTitle>
+		</WindTile>
+		<UVTile>
+			<BackButton />
+			<UVGraph>
+				<UVGraphSVG />
+			</UVGraph>
+			<CurrentUVData>
+				<CurrentUVNumber/>
+				<UVUnits>
+					uv
+				</UVUnits>
+			</CurrentUVData>
+			<UVTileTitle>
+				UV
+			</UVTileTitle>
+		</UVTile>
+		<HumidityTile>
+			<BackButton />
+			<HumidityGraph>
+				<HumidityGraphSVG />
+			</HumidityGraph>
+			<CurrentHumidityData>
+				<CurrentHumidityNumber/>
+				<HumidityUnits>
+					%
+				</HumidityUnits>
+			</CurrentHumidityData>
+			<HumidityTileTitle>
+				Humidity
+			</HumidityTileTitle>
+		</HumidityTile>
+		<VisibilityTile>
+			<BackButton />
+			<VisibilityGraph>
+				<VisibilityGraphSVG />
+			</VisibilityGraph>
+			<CurrentVisibilityData>
+				<CurrentVisibilityNumber/>
+				<VisibilityUnits>
+					km
+				</VisibilityUnits>
+			</CurrentVisibilityData>
+			<VisibilityTileTitle>
+				Visibility
+			</VisibilityTileTitle>
+		</VisibilityTile>
+	</OtherWeatherDataWrapper>
+</Background>
