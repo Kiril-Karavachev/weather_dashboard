@@ -1,4 +1,5 @@
 <Background>
+	<WheatherDashboardWrapper>
 	<CurrentTemperatureDateAndTime>
 		<CurrentTemperatureTile>
 			<CurrentTemperatureIcon />
@@ -11,56 +12,56 @@
 						<HourlyTempCandle />
 					</HourlyTempCandleBox>
 					<HourlyTempHourIs />
-				</HourlyTempCandleWrapper>
+				</HourlyTemp>
 				<HourlyTemp key=2>
 					<HourlyTempIs />
 					<HourlyTempCandleBox>
 						<HourlyTempCandle />
 					</HourlyTempCandleBox>
 					<HourlyTempHourIs />
-				</HourlyTempCandleWrapper>
+				</HourlyTemp>
 				<HourlyTemp key=3>
 					<HourlyTempIs />
 					<HourlyTempCandleBox>
 						<HourlyTempCandle />
 					</HourlyTempCandleBox>
 					<HourlyTempHourIs />
-				</HourlyTempCandleWrapper>
+				</HourlyTemp>
 				<HourlyTemp key=4>
 					<HourlyTempIs />
 					<HourlyTempCandleBox>
 						<HourlyTempCandle />
 					</HourlyTempCandleBox>
 					<HourlyTempHourIs />
-				</HourlyTempCandleWrapper>
+				</HourlyTemp>
 				<HourlyTemp key=5>
 					<HourlyTempIs />
 					<HourlyTempCandleBox>
 						<HourlyTempCandle />
 					</HourlyTempCandleBox>
 					<HourlyTempHourIs />
-				</HourlyTempCandleWrapper>
+				</HourlyTemp>
 				<HourlyTemp key=6>
 					<HourlyTempIs />
 					<HourlyTempCandleBox>
 						<HourlyTempCandle />
 					</HourlyTempCandleBox>
 					<HourlyTempHourIs />
-				</HourlyTempCandleWrapper>
+				</HourlyTemp>
 				<HourlyTemp key=7>
 					<HourlyTempIs />
 					<HourlyTempCandleBox>
 						<HourlyTempCandle />
 					</HourlyTempCandleBox>
 					<HourlyTempHourIs />
-				</HourlyTempCandleWrapper>
+				</HourlyTemp>
 				<HourlyTemp key=8>
 					<HourlyTempIs />
 					<HourlyTempCandleBox>
 						<HourlyTempCandle />
 					</HourlyTempCandleBox>
 					<HourlyTempHourIs />
-				</HourlyTempCandleWrapper>
+				</HourlyTemp>
 				<HourlyTempGraphXAxisLine />
 			</HourlyTempGraphWrapper>
 		</CurrentTemperatureTile>
@@ -78,7 +79,6 @@
 		<CurrentCountryText />
 	</CurrentLocationWraper>
 	<SunStateWrapper>
-		<SunriseDataWrapper>
 			<SunriseInfoWrapper>
 				<SunriseInfoTitle>
 					Sunrise:
@@ -88,13 +88,12 @@
 			<SunMoonPath>
 				<SunMoonIcon/>
 			</SunMoonPath>
-			<SunsetInfoTitle>
+			<SunsetInfoWrapper>
 				<SunsetInfoTitle>
 					Sunset:
 				</SunsetInfoTitle>
 				<SunsetInfoTime />
-			</SunsetInfoTitle>
-		</SunriseDataWrapper>
+			</SunsetInfoWrapper>
 	</SunStateWrapper>
 	<FifeDayForecastWrapper>
 		<TheNextFiveDaysTitle />
@@ -238,4 +237,5 @@
 			</VisibilityTileTitle>
 		</VisibilityTile>
 	</OtherWeatherDataWrapper>
+	<WheatherDashboardWrapper>
 </Background>
