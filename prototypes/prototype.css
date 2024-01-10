@@ -202,11 +202,48 @@ input {
 	border-radius: 20px;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	height: 100%;
 }
+
+.hourly-temp
+{
+	width: 28px;
+	height: 70%;
+	background-color: var(--box-color-transparent);
+	position: relative;
+}
+
+.hourly-temp-is,
+.hourly-temp-hour-is
+{
+	position: absolute;
+	display: block;
+	height: fit-content;
+	width: 100%;
+	font-size: 12px;
+	text-align: center;
+}
+
+.hourly-temp-is
+{
+	bottom: calc(100% + 1px);
+}
+
+.hourly-temp-hour-is
+{
+	top: calc(100% + 1px);
+}
+
+
 
 #hourly-temp-graph-x-axis-line
 {
-	position: relative;
+	position: absolute;
 	background-color: var(--stroke-color);
 	height: 2px;
 	width: 100%;
