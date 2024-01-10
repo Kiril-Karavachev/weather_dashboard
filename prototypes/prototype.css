@@ -43,7 +43,6 @@
 	box-sizing: border-box;
 	font-family: 'Red Hat Display', sans-serif;
 	cursor: default;
-	transition: 300ms;
 }
 
 span {
@@ -109,8 +108,8 @@ input {
 #background-texture::before {
 	position: fixed;
 	content: "";
-	width: 100vw;
-	height: 100vh;
+	width: 150%;
+	height: 150%;
 	left: 0%;
 	top: 0%;
 	background-image: url(../weather_dashboard/src/images/leatherTexture.png);
@@ -122,14 +121,17 @@ input {
 
 #dashboard-background::before {
 	position: fixed;
-	width: 100vw;
-	height: 100vh;
+	width: 150%;
+	height: 150%;
+	left: 0%;
+	top: 0%;
 	content: "";
 	background: var(--dashboard-background);
 	z-index: -1;
 }
 
 #dashboard-wrapper-grid {
+	position: absolute;
 	display: grid;
 	overflow: visible;
 	z-index: 2;
@@ -139,6 +141,7 @@ input {
 }
 
 #current-temp-tile{
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -146,11 +149,45 @@ input {
 	justify-content: center;
 }
 
+#current-temp-digit
+{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+}
+
 .hourly-temp-graph-hidden {
 	display: none;
 }
 
-#sun-state-wrapper,
+#search-bar-wrapper
+{
+	position: relative;
+	overflow: visible;
+}
+
+#search-drop-down-menu-wrapper
+{
+	position: absolute;
+	top: 100%;
+}
+
+#search-location-bar
+{
+	width: 100%;
+	height: 100%;
+}
+
+#sun-state-wrapper {
+	display: grid;
+}
+
+#sun-state-wrapper > *
+{
+	margin: auto;
+}
+
 #sun-or-moon-path {
 	display: flex;
 	flex-direction: row;
@@ -222,6 +259,14 @@ input {
 	grid-area: a;
 }
 
+#wind-graph,
+#uv-graph,
+#humidity-graph,
+#visibility-graph
+{
+	display: none;
+}
+
 #uv-tile {
 	grid-area: b;
 }
@@ -249,8 +294,13 @@ input {
 	align-items: center;
 }
 
+.main-grid-item{
+	width: 100%;
+	height: 100%;
+}
 
-@media (min-width: 801px) and (max-width: 1366px){
+
+@media (min-width: 1300px){
 	::-ms-input-placeholder {
 		font-size: 16px;
 	}
@@ -264,6 +314,7 @@ input {
 		max-height: 554px !important;
 		min-width: 900px;
 		min-height: 554px;
+		top: 20px;
 		grid-template-rows: 36px 75px 91px 39px 281px;
 		grid-template-columns: 456px 425px;
 		grid-template-areas:
@@ -277,19 +328,18 @@ input {
 		
 	}
 
-	.main-grid-item{
-		width: 100%;
-		height: 100%;
-	}
-
 	#current-temp-date-and-time-wrapper {
 		grid-area: a;
 		flex-direction: row;
 		gap: 19px;
 	}
 
-	#search-location-bar {
+	#search-bar-wrapper
+	{
 		grid-area: b;
+	}
+
+	#search-location-bar {
 		padding: 10px;
 	}
 
@@ -305,12 +355,38 @@ input {
 	#sun-state-wrapper {
 		grid-area: e;
 		gap: 16px;
+		grid-template-areas: 
+		"a b c";
 	}
 
 	.sun-info-text {
 		font-size: 12px;
 		width: 78px;
 		height: fit-content;
+	}
+
+	.order-sunrise-sunset #sunrise-info-wrapper
+	{
+		grid-area: a;
+		text-align: left;
+	}
+
+	.order-sunrise-sunset #sunset-info-wrapper
+	{
+		grid-area: c;
+		text-align: right;
+	}
+
+	.order-sunset-sunrise #sunrise-info-wrapper
+	{
+		grid-area: a;
+		text-align: right;
+	}
+
+	.order-sunset-sunrise #sunset-info-wrapper
+	{
+		grid-area: c;
+		text-align: left;
 	}
 
 	#five-day-forecast-wrapper {
@@ -330,12 +406,9 @@ input {
 
 	#current-temp-digit {
 		font-size: 64px;
-		transform: translateY(50%);
 	}
 
 	#current-weather-icon {
-		position: absolute;
-		top: calc((218px - 200px)/2);
 		width: 200px;
 		height: auto;
 	}
@@ -370,6 +443,7 @@ input {
 	#sun-or-moon-path {
 		width: 240px;
 		height: 18px;
+		grid-area: b;
 	}
 
 	#sun-or-moon-icon {
@@ -446,7 +520,7 @@ input {
 
 }
 
-/* @media (min-width: 800px) and (max-width: 1365px){
+@media (min-width: 715px) and (max-width: 1299px){
 	::-ms-input-placeholder {
 		font-size: 16px;
 	}
@@ -456,79 +530,74 @@ input {
 	}
 	
 	#dashboard-wrapper-grid {
-		min-width: 800px !important;
-		min-height: 689px !important;
-		max-width: 800px !important;
-		max-height: 660px !important;
+		min-width: 690px !important;
+		min-height: 634px !important;
+		max-width: 690px !important;
+		max-height: 634px !important;
+		top: 20px;
+		grid-template-columns: 330px 330px;
+		grid-template-rows: 40px 164px 44px 255px 40px;
 		grid-template-areas:
 			"a a"
 			"b b"
 			"c c"
 			"d e"
 			"f e";
-		gap: 10px;
-		padding: 10px;
-		transform: scale(1);
+		gap: 20px;
+		margin-bottom: 10px;
+	}
+
+	#search-bar-wrapper
+	{
+		grid-area: a;
 	}
 
 	#search-location-bar {
-		grid-area: a;
-		width: 790px;
-		height: 41px;
+
 		padding: 8px;
 	}
 
 	#current-temp-date-and-time-wrapper {
 		grid-area: b;
-		width: 790px;
-		height: 163px;
 		flex-direction: row;
-		gap: 10px;
+		gap: 29px;
 	}
 
 	#sun-state-wrapper {
 		grid-area: c;
-		width: 790px;
-		height: 44px;
 		gap: 16px;
+		grid-template-areas: 
+		"a b c";
 	}
 
 	#five-day-forecast-wrapper {
 		grid-area: d;
-		width: 390px;
-		height: 256px;
 		padding: 5px;
 	}
 
 	#other-weather-data-wrapper {
 		grid-area: e;
-		width: 390px;
-		height: 390px;
 	}
 
 	#current-location-wrapper {
 		grid-area: f;
-		width: 390px;
-		height: 102px;
 		text-align: left;
 	}
 
 	#current-temp-tile,
 	#date-and-time-tile
 	{
-		width: 390px;
+		width: 330px;
 		height: 163px;
 	}
 
 	#current-temp-digit {
 		font-size: 48px;
-		transform: translateY(-100%);
 	}
 
 	#current-weather-icon {
 		width: 200px;
 		height: auto;
-		transform: translateY(10%);
 	}
 
 	#date-data
@@ -582,21 +651,312 @@ input {
 		font-size: 14px;
 	}
 
+	.order-sunrise-sunset #sunrise-info-wrapper
+	{
+		grid-area: a;
+		text-align: left;
+	}
+
+	.order-sunrise-sunset #sunset-info-wrapper
+	{
+		grid-area: c;
+		text-align: right;
+	}
+
+	.order-sunset-sunrise #sunrise-info-wrapper
+	{
+		grid-area: c;
+		text-align: right;
+	}
+
+	.order-sunset-sunrise #sunset-info-wrapper
+	{
+		grid-area: a;
+		text-align: left;
+	}
+
 	#sun-or-moon-path
 	{
-		width: 70%;
+		width: 442px;
+		height: 20px;
+		grid-area: b;
 	}
 
 	#sun-or-moon-icon
 	{
+		width: 28px;
+		height: 28px;
 		margin-left: 60%;
 	}
 	
 	#the-next-five-days-title,
 	.day-plus-wrapper
 	{
-		width: 384px;
+		width: 324px;
 		height: 34px;
+	}
+
+	#the-next-five-days-title
+	{
+		min-height: 35px !important;
+	}
+
+	.day-plus-icon
+	{
+		width: 35px;
+		height: auto;
+	}
+
+	.day-plus-max-temp
+	{
+		font-size: 18px;
+		margin-left: 15px;
+	}
+
+	.day-plus-min-temp
+	{
+		font-size: 14px;
+	}
+
+	.day-plus-day-and-month-are
+	{
+		font-size: 16px;
+		margin-left: 15px;
+	}
+
+	.day-plus-day-of-the-week-is
+	{
+		font-size: 14px;
+	}
+
+	#current-location-wrapper
+	{
+		height: 100%;
+	}
+
+	#current-city
+	{
+		font-size: 40px;
+	}
+
+	#current-country
+	{
+		font-size: 32px;
+	}
+
+	.other-tile
+	{
+		width: 123px;
+		height: 123px;
+		margin: auto;
+	}
+
+	.other-weather-data-number,
+	.other-weather-data-units,
+	.other-data-tile-title
+	{
+		text-align: center;
+	}
+
+	.other-weather-data-number {
+		font-size: 42px;
+	}
+
+	.other-weather-data-units{
+		font-size: 16px;
+	}
+
+	.other-data-tile-title
+	{
+		font-size: 18wpx;
+	}
+
+}
+
+@media (max-width: 714px){
+	::-ms-input-placeholder {
+		font-size: 16px;
+	}
+
+	::placeholder {
+		font-size: 16px;
+	}
+	
+	#dashboard-wrapper-grid {
+		position: absolute !important;
+		min-width: 328px !important;
+		min-height: 1180px !important;
+		max-width: 328px !important;
+		max-height: 1180px !important;
+		left: calc((100% - 328px)/2);
+		top: 10px;
+		grid-template-columns: 328px;
+		grid-template-rows: 36px 45px 322px 62px 282px 324px;
+		grid-template-areas:
+			"a"
+			"b"
+			"c"
+			"d"
+			"e"
+			"f";
+		gap: 22px;
+	}
+
+	#search-bar-wrapper
+	{
+		grid-area: a;
+	}
+
+	#search-location-bar {
+
+		padding: 8px;
+	}
+
+	#current-location-wrapper {
+		grid-area: b;
+		text-align: right;
+	}
+
+	#current-temp-date-and-time-wrapper {
+		grid-area: c;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	#sun-state-wrapper {
+		grid-area: d;
+		grid-template-areas: 
+		"a b"
+		"c c";
+	}
+
+	#five-day-forecast-wrapper {
+		grid-area: e;
+		padding: 5px;
+	}
+
+	#other-weather-data-wrapper {
+		grid-area: f;
+	}
+
+
+
+	#current-temp-tile
+	{
+		width: 100%;
+		height: 215px;
+	}
+
+	#date-and-time-tile
+	{
+		width: 100%;
+		height: 91px;
+	}
+
+	#current-temp-digit {
+		font-size: 64px;
+	}
+
+	#current-weather-icon {
+		width: 250px;
+		height: auto;
+	}
+
+	#date-data
+	{
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-areas: 
+		"a b c"
+		"d d d";
+		padding: 10px;
+	}
+
+	.date-data-to-the-left,
+	.date-data-to-the-right
+	{
+		width: 100%;
+		margin: auto;
+		text-align: center;
+	}
+
+	.date-data-to-the-right
+	{
+		grid-area: d;
+		font-size: 42px;
+	}
+
+	.date-data-to-the-left:nth-of-type(1)
+	{
+		font-size: 18px;
+		grid-area: a;
+		text-align: right;
+	}
+
+	.date-data-to-the-left:nth-of-type(2)
+	{
+		font-size: 18px;
+		grid-area: b;
+		text-align: center;
+	}
+
+	.date-data-to-the-left:nth-of-type(3)
+	{
+		font-size: 18px;
+		grid-area: c;
+		text-align: left;
+	}
+
+	.sun-info-text
+	{
+		font-size: 14px;
+		width: 142px;
+	}
+
+	.order-sunrise-sunset #sunrise-info-wrapper
+	{
+		grid-area: a;
+		text-align: left;
+	}
+
+	.order-sunrise-sunset #sunset-info-wrapper
+	{
+		grid-area: b;
+		text-align: right;
+	}
+
+	.order-sunset-sunrise #sunrise-info-wrapper
+	{
+		grid-area: b;
+		text-align: right;
+	}
+
+	.order-sunset-sunrise #sunset-info-wrapper
+	{
+		grid-area: a;
+		text-align: left;
+	}
+
+	#sun-or-moon-path
+	{
+		width: 283px;
+		height: 20px;
+		grid-area: c;
+	}
+
+	#sun-or-moon-icon
+	{
+		width: 28px;
+		height: 28px;
+		margin-left: 60%;
+	}
+	
+	#the-next-five-days-title,
+	.day-plus-wrapper
+	{
+		width: 319px;
+		height: 39px;
 	}
 
 	#the-next-five-days-title
@@ -639,23 +999,62 @@ input {
 
 	#current-city
 	{
-		font-size: 54px;
+		font-size: 40px;
 	}
 
 	#current-country
 	{
-		font-size: 40px;
+		font-size: 32px;
 	}
 
 	.other-tile
 	{
-		width: 150px;
-		height: 150px;
+		width: 123px;
+		height: 123px;
 		margin: auto;
 	}
 
-} */
+	.other-weather-data-number,
+	.other-weather-data-units,
+	.other-data-tile-title
+	{
+		text-align: center;
+	}
 
-@media (max-width: 350px) and (orientation: portrait) {
+	.other-weather-data-number {
+		font-size: 42px;
+	}
 
+	.other-weather-data-units{
+		font-size: 16px;
+	}
+
+	.other-data-tile-title
+	{
+		font-size: 18wpx;
+	}
+}
+
+@media (max-width: 325px){
+
+	#dashboard-wrapper-grid
+	{
+		transform: scale(0.85);
+	}
+}
+
+@media (max-width: 265px){
+	
+	#dashboard-wrapper-grid
+	{
+		transform: scale(0.75);
+	}
+}
+
+@media (max-width: 230px){
+	
+	#dashboard-wrapper-grid
+	{
+		transform: scale(0.65);
+	}
 }
