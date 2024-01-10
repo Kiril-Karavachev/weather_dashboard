@@ -1,5 +1,13 @@
-<link rel="stylesheet" href="prototype.css"/>
-<div id="background-texture"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="prototype.css"/>
+	<title>Document</title>
+</head>
+<body>
+	<div id="background-texture"></div>
 <div id="dashboard-background">
 	<main id="dashboard-wrapper-grid">
 		<section id="current-temp-date-and-time-wrapper" class="main-grid-item">
@@ -11,7 +19,7 @@
 				<div class="hourly-temp">
 					<span class="hourly-temp-is"></span>
 					<div class="hourly-temp-candle-box">
-						<div class="hourly-temp-candle has-border""></div>
+						<div class="hourly-temp-candle has-border"></div>
 					</div>
 					<span class="hourly-temp-hour-is"></span>
 				</div>
@@ -76,12 +84,17 @@
 				</div>
 			</div>
 		</section>
-		<input id="search-location-bar" class="main-grid-item has-border linear-gradient-back-180-deg shadow-drop" type="text" placeholder="Search location..."/>
+		<section id="search-bar-wrapper" class="main-grid-item">
+			<input id="search-location-bar" class="has-border linear-gradient-back-180-deg shadow-drop" type="text" placeholder="Search location..."/>
+			<div id="search-drop-down-menu-wrapper">
+				
+			</div>
+		</section>
 		<section id="current-location-wrapper" class="main-grid-item">
 			<span id="current-city">Sofia,</span>
 			<span id="current-country">Bulgaria</span>
 		</section>
-		<section id="sun-state-wrapper" class="main-grid-item has-border linear-gradient-back-180-deg shadow-drop">
+		<section id="sun-state-wrapper" class="main-grid-item order-sunrise-sunset has-border linear-gradient-back-180-deg shadow-drop">
 			<div id="sunrise-info-wrapper" class="sun-info-text">
 				<span id="sunrise-info-title">Sunrise:</span>
 				<span id="sunrise-info-time">07:57</span>
@@ -196,7 +209,7 @@
 					<img class="back-button-arrow" alr="Back button arrow." src=""/>
 				</button>
 				<div id="uv-graph" class="weather-graph">
-					<!--<svg></svg>-->
+					<span title="Add svg here."></span>
 				</div>
 				<div id="current-uv-data" class="other-weather-data-basic-data-wrapper">
 					<div class="value-unit-wrapper">
@@ -212,7 +225,7 @@
 					<img class="back-button-arrow" alr="Back button arrow." src=""/>
 				</button>
 				<div id="humidity-graph" class="weather-graph">
-					<!--<svg></svg>-->
+					<span title="Add svg here."></span>
 				</div>
 				<div id="current-humidity-data" class="other-weather-data-basic-data-wrapper">
 				<div class="value-unit-wrapper">
@@ -227,7 +240,7 @@
 					<img class="back-button-arrow" alr="Back button arrow." src=""/>
 				</button>
 				<div id="visibility-graph" class="weather-graph">
-					<!--<svg></svg>-->
+					<span title="Add svg here."></span>
 				</div>
 				<div id="current-visibility-data" class="other-weather-data-basic-data-wrapper">
 				<div class="value-unit-wrapper">
@@ -240,3 +253,7 @@
 		</section>
 	</main>
 </div>
+
+</body>
+</html>
+
