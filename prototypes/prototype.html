@@ -11,68 +11,68 @@
 <div id="dashboard-background">
 	<main id="dashboard-wrapper-grid">
 		<section id="current-temp-date-and-time-wrapper" class="main-grid-item">
-			<div id="current-temp-tile" class="has-border linear-gradient-back-45-deg shadow-drop">
+			<div id="current-temp-tile" class="hourly-temp-visible has-border linear-gradient-back-45-deg shadow-drop">
 				<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/clearSunnyDay.png"/>
 				<span id="current-temp-digit">25°C</span>
-			</div>
-			<div id="hourly-temp-graph" class="hourly-temp-graph-hidden linear-gradient-back-45-deg shadow-drop">
-				<div class="hourly-temp">
-					<span class="hourly-temp-is"></span>
-					<div class="hourly-temp-candle-box">
-						<div class="hourly-temp-candle has-border"></div>
+				<div id="hourly-temp-graph" class="hourly-temp-graph-visible linear-gradient-back-45-deg shadow-drop">
+					<div class="hourly-temp">
+						<span class="hourly-temp-is">--</span>
+						<div class="hourly-temp-candle-box">
+							<div class="hourly-temp-candle has-border"></div>
+						</div>
+						<span class="hourly-temp-hour-is">--:--</span>
 					</div>
-					<span class="hourly-temp-hour-is"></span>
-				</div>
-				<div class="hourly-temp">
-					<span class="hourly-temp-is"></span>
-					<div class="hourly-temp-candle-box">
-						<div class="hourly-temp-candle has-border"></div>
+					<div class="hourly-temp">
+						<span class="hourly-temp-is">--</span>
+						<div class="hourly-temp-candle-box">
+							<div class="hourly-temp-candle has-border"></div>
+						</div>
+						<span class="hourly-temp-hour-is">--:--</span>
 					</div>
-					<span class="hourly-temp-hour-is"></span>
-				</div>
-				<div class="hourly-temp">
-					<span class="hourly-temp-is"></span>
-					<div class="hourly-temp-candle-box">
-						<div class="hourly-temp-candle has-border"></div>
+					<div class="hourly-temp">
+						<span class="hourly-temp-is">--</span>
+						<div class="hourly-temp-candle-box">
+							<div class="hourly-temp-candle has-border"></div>
+						</div>
+						<span class="hourly-temp-hour-is">--:--</span>
 					</div>
-					<span class="hourly-temp-hour-is"></span>
-				</div>
-				<div class="hourly-temp">
-					<span class="hourly-temp-is"></span>
-					<div class="hourly-temp-candle-box">
-						<div class="hourly-temp-candle has-border"></div>
+					<div class="hourly-temp">
+						<span class="hourly-temp-is">--</span>
+						<div class="hourly-temp-candle-box">
+							<div class="hourly-temp-candle has-border"></div>
+						</div>
+						<span class="hourly-temp-hour-is">--:--</span>
 					</div>
-					<span class="hourly-temp-hour-is"></span>
-				</div>
-				<div class="hourly-temp">
-					<span class="hourly-temp-is"></span>
-					<div class="hourly-temp-candle-box">
-						<div class="hourly-temp-candle has-border"></div>
+					<div class="hourly-temp">
+						<span class="hourly-temp-is">--</span>
+						<div class="hourly-temp-candle-box">
+							<div class="hourly-temp-candle has-border"></div>
+						</div>
+						<span class="hourly-temp-hour-is">--:--</span>
 					</div>
-					<span class="hourly-temp-hour-is"></span>
-				</div>
-				<div class="hourly-temp">
-					<span class="hourly-temp-is"></span>
-					<div class="hourly-temp-candle-box">
-						<div class="hourly-temp-candle has-border"></div>
+					<div class="hourly-temp">
+						<span class="hourly-temp-is">--</span>
+						<div class="hourly-temp-candle-box">
+							<div class="hourly-temp-candle has-border"></div>
+						</div>
+						<span class="hourly-temp-hour-is">--:--</span>
 					</div>
-					<span class="hourly-temp-hour-is"></span>
-				</div>
-				<div class="hourly-temp">
-					<span class="hourly-temp-is"></span>
-					<div class="hourly-temp-candle-box">
-						<div class="hourly-temp-candle has-border"></div>
+					<div class="hourly-temp">
+						<span class="hourly-temp-is">--</span>
+						<div class="hourly-temp-candle-box">
+							<div class="hourly-temp-candle has-border"></div>
+						</div>
+						<span class="hourly-temp-hour-is">--:--</span>
 					</div>
-					<span class="hourly-temp-hour-is"></span>
-				</div>
-				<div class="hourly-temp">
-					<span class="hourly-temp-is"></span>
-					<div class="hourly-temp-candle-box">
-						<div class="hourly-temp-candle has-border"></div>
+					<div class="hourly-temp">
+						<span class="hourly-temp-is">--</span>
+						<div class="hourly-temp-candle-box">
+							<div class="hourly-temp-candle has-border"></div>
+						</div>
+						<span class="hourly-temp-hour-is">--:--</span>
 					</div>
-					<span class="hourly-temp-hour-is"></span>
+					<div id="hourly-temp-graph-x-axis-line">
 				</div>
-				<div id="hourly-temp-graph-x-axis-line">
 			</div>
 			</div>
 			<div id="date-and-time-tile" class="has-border linear-gradient-back-45-deg shadow-drop">
@@ -86,8 +86,12 @@
 		</section>
 		<section id="search-bar-wrapper" class="main-grid-item">
 			<input id="search-location-bar" class="has-border linear-gradient-back-180-deg shadow-drop" type="text" placeholder="Search location..."/>
-			<div id="search-drop-down-menu-wrapper">
-				
+			<div id="search-drop-down-menu-wrapper" class="drop-down-closed has-border linear-gradient-back-45-deg shadow-drop">
+				<span class="search-result-line">Sofia, Bulgaria</span>
+				<span class="search-result-line">Other, Country</span>
+				<span class="search-result-line">Other, Country</span>
+				<span class="search-result-line">Other, Country</span>
+				<span class="search-result-line">Other, Country</span>
 			</div>
 		</section>
 		<section id="current-location-wrapper" class="main-grid-item">
