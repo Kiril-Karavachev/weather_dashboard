@@ -7,13 +7,17 @@
 	<title>Document</title>
 </head>
 <body>
-	<div id="background-texture"></div>
 <div id="dashboard-background">
 	<main id="dashboard-wrapper-grid">
 		<section id="current-temp-date-and-time-wrapper" class="main-grid-item">
 			<div id="current-temp-tile" class="hourly-temp-visible has-border linear-gradient-back-45-deg shadow-drop">
 				<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/clearSunnyDay.png"/>
 				<span id="current-temp-digit">25°C</span>
+				<!--Remove style="display: block; when ready"-->
+				<button style="display: block;" type="button" id="back-button-temp" class="back-button has-border">
+					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/back-arrow.png"/>
+				</button>
+				<div id="temp-graph-scroll-box">
 				<div id="hourly-temp-graph" class="hourly-temp-graph-visible linear-gradient-back-45-deg shadow-drop">
 					<div class="hourly-temp">
 						<span class="hourly-temp-is">25°C</span>
@@ -75,6 +79,7 @@
 					</div>
 					<div id="hourly-temp-graph-x-axis-line">
 				</div>
+			</div>
 			</div>
 			</div>
 			<div id="date-and-time-tile" class="has-border linear-gradient-back-45-deg shadow-drop">
@@ -153,8 +158,8 @@
 		</section>
 		<section id="other-weather-data-wrapper" class="main-grid-item has-border linear-gradient-back-45-deg shadow-drop">
 			<div id="wind-tile" class="other-tile shadow-drop has-border">
-				<button id="back-button-wind" class="back-button has-border">
-					<img class="back-button-arrow" alr="Back button arrow." src=""/>
+				<button type="button" id="back-button-wind" class="back-button has-border">
+					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/back-arrow.png"/>
 				</button>
 				<div id="wind-graph" class="weather-graph">
 					<div class="wind-speed-column">
@@ -211,8 +216,8 @@
 			</div>
 			<div id="uv-tile" class="other-tile shadow-drop has-border">
 				<div id="uv-tile-bar" class="other-tile-bar"></div>
-				<button id="back-button-uv" class="back-button has-border">
-					<img class="back-button-arrow" alr="Back button arrow." src=""/>
+				<button type="button" id="back-button-uv" class="back-button has-border">
+					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/back-arrow.png"/>
 				</button>
 				<div id="uv-graph" class="weather-graph">
 					<span title="Add svg here."></span>
@@ -227,8 +232,8 @@
 			</div>
 			<div id="humidity-tile" class="other-tile shadow-drop has-border">
 				<div id="humidity-tile-bar" class="other-tile-bar"></div>
-				<button id="back-button-humidity" class="back-button">
-					<img class="back-button-arrow" alr="Back button arrow." src=""/>
+				<button type="button" id="back-button-humidity" class="back-button">
+					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/back-arrow.png"/>
 				</button>
 				<div id="humidity-graph" class="weather-graph">
 					<span title="Add svg here."></span>
@@ -242,8 +247,8 @@
 				</div>
 			</div>
 			<div id="visibility-tile" class="other-tile shadow-drop has-border">
-				<button id="back-button-visibility" class="back-button">
-					<img class="back-button-arrow" alr="Back button arrow." src=""/>
+				<button type="button" id="back-button-visibility" class="back-button">
+					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/back-arrow.png"/>
 				</button>
 				<div id="visibility-graph" class="weather-graph">
 					<span title="Add svg here."></span>
