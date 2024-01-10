@@ -2,7 +2,7 @@
 <div id="background-texture"></div>
 <div id="dashboard-background">
 	<main id="dashboard-wrapper-grid">
-		<section id="current-temp-date-and-time-wrapper">
+		<section id="current-temp-date-and-time-wrapper" class="main-grid-item">
 			<div id="current-temp-tile" class="has-border linear-gradient-back-45-deg shadow-drop">
 				<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/clearSunnyDay.png"/>
 				<span id="current-temp-digit">25°C</span>
@@ -69,19 +69,19 @@
 			</div>
 			<div id="date-and-time-tile" class="has-border linear-gradient-back-45-deg shadow-drop">
 				<div id="date-data">
-					<span id="current-day-of-the-week">Monday</span>
-					<span id="current-day-and-month">06 JAN</span>
-					<span id="current-year">2024</span>
-					<span id="current-time">13:16</span>
+					<span id="current-day-of-the-week" class="date-data-to-the-left">Monday</span>
+					<span id="current-day-and-month" class="date-data-to-the-left">06 JAN</span>
+					<span id="current-year" class="date-data-to-the-left">2024</span>
+					<span id="current-time" class="date-data-to-the-right">13:16</span>
 				</div>
 			</div>
 		</section>
-		<input id="search-location-bar" class="has-border linear-gradient-back-180-deg shadow-drop" type="text" placeholder="Search location..."/>
-		<section id="current-location-wrapper">
+		<input id="search-location-bar" class="main-grid-item has-border linear-gradient-back-180-deg shadow-drop" type="text" placeholder="Search location..."/>
+		<section id="current-location-wrapper" class="main-grid-item">
 			<span id="current-city">Sofia,</span>
 			<span id="current-country">Bulgaria</span>
 		</section>
-		<section id="sun-state-wrapper" class="has-border linear-gradient-back-180-deg shadow-drop">
+		<section id="sun-state-wrapper" class="main-grid-item has-border linear-gradient-back-180-deg shadow-drop">
 			<div id="sunrise-info-wrapper" class="sun-info-text">
 				<span id="sunrise-info-title">Sunrise:</span>
 				<span id="sunrise-info-time">07:57</span>
@@ -94,7 +94,7 @@
 				<span id="sunset-info-time">17:08</span>
 			</div>
 		</section>
-		<section id="five-day-forecast-wrapper" class="linear-gradient-back-45-deg shadow-drop has-border">
+		<section id="five-day-forecast-wrapper" class="main-grid-item linear-gradient-back-45-deg shadow-drop has-border">
 			<span id="the-next-five-days-title" class="has-border linear-gradient-back-180-deg shadow-drop">the next 5 days</span>
 			<div class="day-plus-wrapper has-border linear-gradient-back-180-deg shadow-drop">
 				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/lessCloudySunnyDay.png"/>
@@ -132,7 +132,7 @@
 				<span class="day-plus-day-of-the-week-is"> Saturday</span>
 			</div>
 		</section>
-		<section id="other-weather-data-wrapper" class="has-border linear-gradient-back-45-deg shadow-drop">
+		<section id="other-weather-data-wrapper" class="main-grid-item has-border linear-gradient-back-45-deg shadow-drop">
 			<div id="wind-tile" class="other-tile shadow-drop has-border">
 				<button id="back-button-wind" class="back-button has-border">
 					<img class="back-button-arrow" alr="Back button arrow." src=""/>
@@ -183,9 +183,11 @@
 					<div id="wind-graph-x-axis-line"></div>
 				</div>
 				<div id="current-wind-speed-data" class="other-weather-data-basic-data-wrapper">
-					<span id="current-wind-speed-number" class="other-weather-data-number">5</span>
-					<span id="current-wind-speed-units" class="other-weather-data-units">km/h</span>
-					<span id="wind-tile-title" class="other-data-tile-title">Wind</span>
+					<div class="value-unit-wrapper">
+						<span id="current-wind-speed-number" class="other-weather-data-number">5</span>
+						<span id="current-wind-speed-units" class="other-weather-data-units">km/h</span>
+						<span id="wind-tile-title" class="other-data-tile-title">Wind</span>
+					</div>
 				</div>
 			</div>
 			<div id="uv-tile" class="other-tile shadow-drop has-border">
@@ -197,9 +199,11 @@
 					<!--<svg></svg>-->
 				</div>
 				<div id="current-uv-data" class="other-weather-data-basic-data-wrapper">
-					<span id="current-uv-number" class="other-weather-data-number">5.50</span>
-					<span id="current-uv-units" class="other-weather-data-units">uv</span>
-					<span id="uv-tile-title" class="other-data-tile-title">UV</span>
+					<div class="value-unit-wrapper">
+						<span id="current-uv-number" class="other-weather-data-number">5.50</span>
+						<span id="current-uv-units" class="other-weather-data-units">uv</span>
+						<span id="uv-tile-title" class="other-data-tile-title">UV</span>
+					</div>
 				</div>
 			</div>
 			<div id="humidity-tile" class="other-tile shadow-drop has-border">
@@ -211,9 +215,11 @@
 					<!--<svg></svg>-->
 				</div>
 				<div id="current-humidity-data" class="other-weather-data-basic-data-wrapper">
+				<div class="value-unit-wrapper">
 					<span id="current-humidity-number" class="other-weather-data-number">83</span>
 					<span id="current-humidity-units" class="other-weather-data-units">%</span>
 					<span id="humidity-tile-title" class="other-data-tile-title">Humidity</span>
+				</div>
 				</div>
 			</div>
 			<div id="visibility-tile" class="other-tile shadow-drop has-border">
@@ -224,9 +230,11 @@
 					<!--<svg></svg>-->
 				</div>
 				<div id="current-visibility-data" class="other-weather-data-basic-data-wrapper">
+				<div class="value-unit-wrapper">
 					<span id="current-visibility-number" class="other-weather-data-number">3</span>
 					<span id="current-visibility-units" class="other-weather-data-units">km</span>
 					<span id="visibility-tile-title" class="other-data-tile-title">Visibility</span>
+				</div>
 				</div>			
 			</div>
 		</section>
