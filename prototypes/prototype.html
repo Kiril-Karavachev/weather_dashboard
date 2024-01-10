@@ -16,60 +16,62 @@
 				<span id="current-temp-digit">25°C</span>
 				<div id="hourly-temp-graph" class="hourly-temp-graph-visible linear-gradient-back-45-deg shadow-drop">
 					<div class="hourly-temp">
-						<span class="hourly-temp-is">--</span>
+						<span class="hourly-temp-is">25°C</span>
 						<div class="hourly-temp-candle-box">
-							<div class="hourly-temp-candle has-border"></div>
+							<!--Formula is (current temperature/50) * 100-->
+							<!--height: 100%; for the hourly-temp-candle is 50°C, so anything above 50°C will be height: 100%;-->
+							<div style="height: 50%;" class="hourly-temp-candle has-border"></div>
 						</div>
-						<span class="hourly-temp-hour-is">--:--</span>
+						<span class="hourly-temp-hour-is">14:00</span>
 					</div>
 					<div class="hourly-temp">
-						<span class="hourly-temp-is">--</span>
+						<span class="hourly-temp-is">26°C</span>
 						<div class="hourly-temp-candle-box">
-							<div class="hourly-temp-candle has-border"></div>
+							<div style="height: 52%;" class="hourly-temp-candle has-border"></div>
 						</div>
-						<span class="hourly-temp-hour-is">--:--</span>
+						<span class="hourly-temp-hour-is">15:00</span>
 					</div>
 					<div class="hourly-temp">
-						<span class="hourly-temp-is">--</span>
+						<span class="hourly-temp-is">27°C</span>
 						<div class="hourly-temp-candle-box">
-							<div class="hourly-temp-candle has-border"></div>
+							<div style="height: 54%;" class="hourly-temp-candle has-border"></div>
 						</div>
-						<span class="hourly-temp-hour-is">--:--</span>
+						<span class="hourly-temp-hour-is">16:00</span>
 					</div>
 					<div class="hourly-temp">
-						<span class="hourly-temp-is">--</span>
+						<span class="hourly-temp-is">24°C</span>
 						<div class="hourly-temp-candle-box">
-							<div class="hourly-temp-candle has-border"></div>
+							<div style="height: 48%;" class="hourly-temp-candle has-border"></div>
 						</div>
-						<span class="hourly-temp-hour-is">--:--</span>
+						<span class="hourly-temp-hour-is">17:00</span>
 					</div>
 					<div class="hourly-temp">
-						<span class="hourly-temp-is">--</span>
+						<span class="hourly-temp-is">23°C</span>
 						<div class="hourly-temp-candle-box">
-							<div class="hourly-temp-candle has-border"></div>
+							<div style="height: 46%;" class="hourly-temp-candle has-border"></div>
 						</div>
-						<span class="hourly-temp-hour-is">--:--</span>
+						<span class="hourly-temp-hour-is">18:00</span>
 					</div>
 					<div class="hourly-temp">
-						<span class="hourly-temp-is">--</span>
+						<span class="hourly-temp-is">23°C</span>
 						<div class="hourly-temp-candle-box">
-							<div class="hourly-temp-candle has-border"></div>
+							<div style="height: 46%;" class="hourly-temp-candle has-border"></div>
 						</div>
-						<span class="hourly-temp-hour-is">--:--</span>
+						<span class="hourly-temp-hour-is">19:00</span>
 					</div>
 					<div class="hourly-temp">
-						<span class="hourly-temp-is">--</span>
+						<span class="hourly-temp-is">22°C</span>
 						<div class="hourly-temp-candle-box">
-							<div class="hourly-temp-candle has-border"></div>
+							<div style="height: 44%;" class="hourly-temp-candle has-border"></div>
 						</div>
-						<span class="hourly-temp-hour-is">--:--</span>
+						<span class="hourly-temp-hour-is">20:00</span>
 					</div>
 					<div class="hourly-temp">
-						<span class="hourly-temp-is">--</span>
-						<div class="hourly-temp-candle-box">
-							<div class="hourly-temp-candle has-border"></div>
+						<span class="hourly-temp-is">-20°C</span>
+						<div class="hourly-temp-candle-box temp-is-below-zero">
+							<div style="height: 40%;" class="hourly-temp-candle has-border"></div>
 						</div>
-						<span class="hourly-temp-hour-is">--:--</span>
+						<span class="hourly-temp-hour-is">21:00</span>
 					</div>
 					<div id="hourly-temp-graph-x-axis-line">
 				</div>
