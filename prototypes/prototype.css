@@ -68,6 +68,75 @@ input:focus::placeholder {
 	color: var(--secondary-color);
 }
 
+#current-location-wrapper
+{
+	display: grid;
+	grid-template-areas: 
+	"a b";
+}
+
+#current-location-wrapper *
+{
+	margin: auto;
+}
+
+#theme-switch *
+{
+	transition: 300ms;
+}
+
+#theme-switch{
+	position: relative;
+}
+
+#theme-slider,
+.theme-icon
+{
+	position: absolute;
+}
+
+#theme-switch
+{
+	display: block;
+	height: 69px;
+	width: 36px;
+}
+
+#theme-slider
+{
+	left: calc((100% - 30px)/2);
+	width: 30px;
+	height: 30px;
+	background-color: var(--secondary-color);
+}
+
+#theme-slider.is-light-theme{
+	bottom: 3px;
+}
+
+#theme-slider.is-dark-theme{
+	top: 3px;
+}
+
+.theme-icon
+{
+	width: 20px;
+	height: auto;
+	left: calc((100% - 20px)/2);
+}
+
+#light-theme-icon
+{
+	bottom: 3px;
+}
+
+#dark-theme-icon
+{
+	top: 3px;
+}
+
+
+  
 .other-tile-bar {
 	position: absolute;
 	bottom: 0%;
@@ -474,6 +543,8 @@ input:focus::placeholder {
 		font-size: 16px;
 	}
 
+	
+
 	#dashboard-wrapper-grid {
 		max-width: 920px !important;
 		max-height: 608.35px !important;
@@ -509,6 +580,20 @@ input:focus::placeholder {
 	#current-location-wrapper {
 		grid-area: c;
 		text-align: right;
+		grid-template-columns: 37px 413px;
+	}
+
+	#theme-switch
+	{
+		grid-area: a;
+		margin: unset;
+		margin-top: 5.5px;
+	}
+
+	#current-location-text-data
+	{
+		grid-area: b;
+		width: 100%;
 	}
 
 	#other-weather-data-wrapper {
@@ -687,6 +772,7 @@ input:focus::placeholder {
 	::placeholder {
 		font-size: 16px;
 	}
+
 	
 	#dashboard-wrapper-grid {
 		min-width: 690px !important;
@@ -741,6 +827,22 @@ input:focus::placeholder {
 	#current-location-wrapper {
 		grid-area: f;
 		text-align: left;
+	}
+
+	#theme-switch
+	{
+		grid-area: b;
+		transform: rotate(90deg);
+	}
+
+	.theme-icon
+	{
+		transform: rotate(-90deg);
+	}
+
+	#current-location-text-data
+	{
+		grid-area: a;
 	}
 
 	#current-temp-tile,
@@ -949,7 +1051,7 @@ input:focus::placeholder {
 		max-width: 328px !important;
 		max-height: 1180px !important;
 		left: calc((100% - 328px)/2);
-		top: 10px;
+		top: 50px;
 		grid-template-columns: 328px;
 		grid-template-rows: 36px 45px 322px 62px 282px 324px;
 		grid-template-areas:
@@ -983,6 +1085,22 @@ input:focus::placeholder {
 	#current-location-wrapper {
 		grid-area: b;
 		text-align: right;
+	}
+
+	#theme-switch
+	{
+		grid-area: a;
+		transform: rotate(90deg);
+	}
+
+	.theme-icon
+	{
+		transform: rotate(-90deg);
+	}
+
+	#current-location-text-data
+	{
+		grid-area: b;
 	}
 
 	#current-temp-date-and-time-wrapper {
