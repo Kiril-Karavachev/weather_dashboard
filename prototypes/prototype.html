@@ -10,15 +10,15 @@
 <div id="dashboard-background">
 	<main id="dashboard-wrapper-grid">
 		<section id="current-temp-date-and-time-wrapper" class="main-grid-item">
-			<div id="current-temp-tile" class="hourly-temp-visible has-border linear-gradient-back-45-deg shadow-drop">
+			<div id="current-temp-tile" class="hourly-temp-visible has-border">
 				<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/clearSunnyDay.png"/>
 				<span id="current-temp-digit">25°C</span>
 				<!--Remove style="display: block; when ready"-->
 				<button style="display: block;" type="button" id="back-button-temp" class="back-button has-border">
-					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/back-arrow.png"/>
+					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
 				</button>
 				<div id="temp-graph-scroll-box">
-				<div id="hourly-temp-graph" class="hourly-temp-graph-visible linear-gradient-back-45-deg shadow-drop">
+				<div id="hourly-temp-graph" class="hourly-temp-graph-visible">
 					<div class="hourly-temp">
 						<span class="hourly-temp-is">25°C</span>
 						<div class="hourly-temp-candle-box">
@@ -82,7 +82,7 @@
 			</div>
 			</div>
 			</div>
-			<div id="date-and-time-tile" class="has-border linear-gradient-back-45-deg shadow-drop">
+			<div id="date-and-time-tile" class="has-border">
 				<div id="date-data">
 					<span id="current-day-of-the-week" class="date-data-to-the-left">Monday</span>
 					<span id="current-day-and-month" class="date-data-to-the-left">06 JAN</span>
@@ -92,8 +92,8 @@
 			</div>
 		</section>
 		<section id="search-bar-wrapper" class="main-grid-item">
-			<input id="search-location-bar" class="has-border linear-gradient-back-180-deg shadow-drop" type="text" placeholder="Search location..."/>
-			<div id="search-drop-down-menu-wrapper" class="drop-down-closed has-border linear-gradient-back-45-deg shadow-drop">
+			<input id="search-location-bar" class="has-border" type="text" placeholder="Search location..."/>
+			<div id="search-drop-down-menu-wrapper" class="drop-down-closed has-border">
 				<span class="search-result-line">Sofia, Bulgaria</span>
 				<span class="search-result-line">Other, Country</span>
 				<span class="search-result-line">Other, Country</span>
@@ -105,50 +105,50 @@
 			<span id="current-city">Sofia,</span>
 			<span id="current-country">Bulgaria</span>
 		</section>
-		<section id="sun-state-wrapper" class="main-grid-item order-sunrise-sunset has-border linear-gradient-back-180-deg shadow-drop">
+		<section id="sun-state-wrapper" class="main-grid-item order-sunrise-sunset has-border">
 			<div id="sunrise-info-wrapper" class="sun-info-text">
 				<span id="sunrise-info-title">Sunrise:</span>
 				<span id="sunrise-info-time">07:57</span>
 			</div>
 			<div id="sun-or-moon-path" class="has-border">
-				<img id="sun-or-moon-icon" alt="A sun or a moon icon." src="../weather_dashboard/src/icons/sunIcon.png"/>
+				<img id="sun-or-moon-icon" alt="A sun or a moon icon." src="../weather_dashboard/src/icons/dark-sun-icon.svg"/>
 			</div>
 			<div id="sunset-info-wrapper" class="sun-info-text">
 				<span id="sunset-info-title">Sunset:</span>
 				<span id="sunset-info-time">17:08</span>
 			</div>
 		</section>
-		<section id="five-day-forecast-wrapper" class="main-grid-item linear-gradient-back-45-deg shadow-drop has-border">
-			<span id="the-next-five-days-title" class="has-border linear-gradient-back-180-deg shadow-drop">the next 5 days</span>
-			<div class="day-plus-wrapper has-border linear-gradient-back-180-deg shadow-drop">
+		<section id="five-day-forecast-wrapper" class="main-grid-item   has-border">
+			<span id="the-next-five-days-title">the next 5 days</span>
+			<div class="day-plus-wrapper">
 				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/lessCloudySunnyDay.png"/>
 				<span class="day-plus-max-temp">+24°/</span>
 				<span class="day-plus-min-temp">+15°</span>
 				<span class="day-plus-day-and-month-are">07 JAN,</span>
 				<span class="day-plus-day-of-the-week-is"> Tuesday</span>
 			</div>
-			<div class="day-plus-wrapper has-border linear-gradient-back-180-deg shadow-drop">
+			<div class="day-plus-wrapper">
 				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/cloudySunnyDay.png"/>
 				<span class="day-plus-max-temp">+23°/</span>
 				<span class="day-plus-min-temp">+11°</span>
 				<span class="day-plus-day-and-month-are">08 JAN,</span>
 				<span class="day-plus-day-of-the-week-is"> Wednesday</span>
 			</div>
-			<div class="day-plus-wrapper has-border linear-gradient-back-180-deg shadow-drop">
+			<div class="day-plus-wrapper">
 				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/cloudySunnyDay.png"/>
 				<span class="day-plus-max-temp">+20°/</span>
 				<span class="day-plus-min-temp">+7°</span>
 				<span class="day-plus-day-and-month-are">09 JAN,</span>
 				<span class="day-plus-day-of-the-week-is"> Thursday</span>
 			</div>
-			<div class="day-plus-wrapper has-border linear-gradient-back-180-deg shadow-drop">
+			<div class="day-plus-wrapper">
 				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/cloudyDay.png"/>
 				<span class="day-plus-max-temp">+21°/</span>
 				<span class="day-plus-min-temp">+9°</span>
 				<span class="day-plus-day-and-month-are">10 JAN,</span>
 				<span class="day-plus-day-of-the-week-is"> Friday</span>
 			</div>
-			<div class="day-plus-wrapper has-border linear-gradient-back-180-deg shadow-drop">
+			<div class="day-plus-wrapper">
 				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/rainySunnyDay.png"/>
 				<span class="day-plus-max-temp">+18°/</span>
 				<span class="day-plus-min-temp">+6°</span>
@@ -156,10 +156,10 @@
 				<span class="day-plus-day-of-the-week-is"> Saturday</span>
 			</div>
 		</section>
-		<section id="other-weather-data-wrapper" class="main-grid-item has-border linear-gradient-back-45-deg shadow-drop">
-			<div id="wind-tile" class="other-tile shadow-drop has-border">
+		<section id="other-weather-data-wrapper" class="main-grid-item has-border">
+			<div id="wind-tile" class="other-tile  has-border">
 				<button type="button" id="back-button-wind" class="back-button has-border">
-					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/back-arrow.png"/>
+					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
 				</button>
 				<div id="wind-graph" class="weather-graph">
 					<div class="wind-speed-column">
@@ -214,10 +214,10 @@
 					</div>
 				</div>
 			</div>
-			<div id="uv-tile" class="other-tile shadow-drop has-border">
+			<div id="uv-tile" class="other-tile  has-border">
 				<div id="uv-tile-bar" class="other-tile-bar"></div>
 				<button type="button" id="back-button-uv" class="back-button has-border">
-					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/back-arrow.png"/>
+					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
 				</button>
 				<div id="uv-graph" class="weather-graph">
 					<span title="Add svg here."></span>
@@ -230,10 +230,10 @@
 					</div>
 				</div>
 			</div>
-			<div id="humidity-tile" class="other-tile shadow-drop has-border">
+			<div id="humidity-tile" class="other-tile  has-border">
 				<div id="humidity-tile-bar" class="other-tile-bar"></div>
 				<button type="button" id="back-button-humidity" class="back-button">
-					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/back-arrow.png"/>
+					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
 				</button>
 				<div id="humidity-graph" class="weather-graph">
 					<span title="Add svg here."></span>
@@ -246,9 +246,9 @@
 				</div>
 				</div>
 			</div>
-			<div id="visibility-tile" class="other-tile shadow-drop has-border">
+			<div id="visibility-tile" class="other-tile  has-border">
 				<button type="button" id="back-button-visibility" class="back-button">
-					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/back-arrow.png"/>
+					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
 				</button>
 				<div id="visibility-graph" class="weather-graph">
 					<span title="Add svg here."></span>
@@ -264,7 +264,8 @@
 		</section>
 	</main>
 </div>
-
+<!--Bottom box to expand the whitespace of the page-->
+<div id="bottom-padding-mobile"></div>
 </body>
 </html>
 
