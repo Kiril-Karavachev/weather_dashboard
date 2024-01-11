@@ -379,7 +379,7 @@ input:focus::placeholder {
 	flex-direction: row;
 	align-items: center;
 	align-content: center;
-	padding-left: 5px;
+	padding-left: 15px;
 	border-radius: 0;
 	border-bottom: dotted 1px var(--main-color);
 }
@@ -524,7 +524,7 @@ input:focus::placeholder {
 
 	.sun-info-text {
 		font-size: 12px;
-		width: 78px;
+		width: fit-content;
 		height: fit-content;
 	}
 
@@ -572,8 +572,9 @@ input:focus::placeholder {
 	}
 
 	#current-weather-icon {
-		width: 200px;
+		width: 80px;
 		height: auto;
+		transform: translateY(-50%);
 	}
 
 	#date-data * {
@@ -625,11 +626,6 @@ input:focus::placeholder {
 	.day-plus-wrapper {
 		width: 450.09px;
 		height: 43px;
-	}
-
-	#the-next-five-days-title,
-	.day-plus-wrapper {
-		padding-left: 10px;
 	}
 
 	.day-plus-wrapper .day-plus-max-temp,
@@ -759,8 +755,9 @@ input:focus::placeholder {
 	}
 
 	#current-weather-icon {
-		width: 200px;
+		width: 70px;
 		height: auto;
+		transform: translateY(-40%);
 	}
 
 	#date-data
@@ -1035,8 +1032,9 @@ input:focus::placeholder {
 	}
 
 	#current-weather-icon {
-		width: 250px;
+		width: 100px;
 		height: auto;
+		transform: translateY(-40%);
 	}
 
 	#date-data
