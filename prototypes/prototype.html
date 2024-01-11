@@ -10,15 +10,18 @@
 <div id="dashboard-background">
 	<main id="dashboard-wrapper-grid">
 		<section id="current-temp-date-and-time-wrapper" class="main-grid-item">
-			<div id="current-temp-tile" class="hourly-temp-visible has-border">
-				<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/clearSunnyDay.png"/>
+			<!--Add hourly-temp-visible in class of #current-temp-tile to expand the graph-->
+			<div id="current-temp-tile" class="has-border">
+				<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/sunny.svg"/>
 				<span id="current-temp-digit">25°C</span>
-				<!--Remove style="display: block; when ready"-->
-				<button style="display: block;" type="button" id="back-button-temp" class="back-button has-border">
+				<!--Remove style="display: block/none; when ready"-->
+				<button style="display: none;" type="button" id="back-button-temp" class="back-button has-border">
 					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
 				</button>
 				<div id="temp-graph-scroll-box">
-				<div id="hourly-temp-graph" class="hourly-temp-graph-visible">
+				<!--Add hourly-temp-graph-visible in class of #hourly-temp-graph to show graph-->
+				<!--Add hourly-temp-graph-hidden in class of #hourly-temp-graph to hide graph-->
+				<div id="hourly-temp-graph" class="hourly-temp-graph-hidden">
 					<div class="hourly-temp">
 						<span class="hourly-temp-is">25°C</span>
 						<div class="hourly-temp-candle-box">
@@ -121,35 +124,35 @@
 		<section id="five-day-forecast-wrapper" class="main-grid-item   has-border">
 			<span id="the-next-five-days-title">the next 5 days</span>
 			<div class="day-plus-wrapper">
-				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/lessCloudySunnyDay.png"/>
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/less-cloudy.svg"/>
 				<span class="day-plus-max-temp">+24°/</span>
 				<span class="day-plus-min-temp">+15°</span>
 				<span class="day-plus-day-and-month-are">07 JAN,</span>
 				<span class="day-plus-day-of-the-week-is"> Tuesday</span>
 			</div>
 			<div class="day-plus-wrapper">
-				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/cloudySunnyDay.png"/>
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/less-cloudy.svg"/>
 				<span class="day-plus-max-temp">+23°/</span>
 				<span class="day-plus-min-temp">+11°</span>
 				<span class="day-plus-day-and-month-are">08 JAN,</span>
 				<span class="day-plus-day-of-the-week-is"> Wednesday</span>
 			</div>
 			<div class="day-plus-wrapper">
-				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/cloudySunnyDay.png"/>
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/less-cloudy.svg"/>
 				<span class="day-plus-max-temp">+20°/</span>
 				<span class="day-plus-min-temp">+7°</span>
 				<span class="day-plus-day-and-month-are">09 JAN,</span>
 				<span class="day-plus-day-of-the-week-is"> Thursday</span>
 			</div>
 			<div class="day-plus-wrapper">
-				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/cloudyDay.png"/>
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/cloudy.svg"/>
 				<span class="day-plus-max-temp">+21°/</span>
 				<span class="day-plus-min-temp">+9°</span>
 				<span class="day-plus-day-and-month-are">10 JAN,</span>
 				<span class="day-plus-day-of-the-week-is"> Friday</span>
 			</div>
 			<div class="day-plus-wrapper">
-				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/rainySunnyDay.png"/>
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/light-rain-sunny.svg"/>
 				<span class="day-plus-max-temp">+18°/</span>
 				<span class="day-plus-min-temp">+6°</span>
 				<span class="day-plus-day-and-month-are">11 JAN,</span>
