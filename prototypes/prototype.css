@@ -1049,7 +1049,7 @@ input:focus::placeholder {
 		max-width: 328px !important;
 		max-height: 1180px !important;
 		left: calc((100% - 328px)/2);
-		top: 50px;
+		top: 20px;
 		grid-template-columns: 328px;
 		grid-template-rows: 36px 45px 322px 62px 282px 324px;
 		grid-template-areas:
@@ -1259,7 +1259,7 @@ input:focus::placeholder {
 
 	.day-plus-icon
 	{
-		width: 35px;
+		width: 30px;
 		height: auto;
 	}
 
