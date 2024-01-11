@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 
 :root {
+/* Light theme */
 --main-color: #434343;
 --secondary-color: white;
+/* Dark theme */
+
+/* --main-color: #C2C2C2;
+--secondary-color: black; */
+
 }
 
 
@@ -41,6 +47,7 @@ span {
 
 input {
 	color: var(--main-color);
+	background-color: var(--secondary-color);
 }
 
 ::-ms-input-placeholder {
@@ -111,7 +118,7 @@ input:focus::placeholder {
 	left: 0%;
 	top: 0%;
 	content: "";
-	background: white;
+	background: var(--secondary-color);
 	z-index: -1;
 }
 
