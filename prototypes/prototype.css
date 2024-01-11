@@ -75,10 +75,6 @@ input:focus::placeholder {
 	"a b";
 }
 
-#current-location-wrapper *
-{
-	margin: auto;
-}
 
 #theme-switch *
 {
@@ -586,7 +582,6 @@ input:focus::placeholder {
 	#theme-switch
 	{
 		grid-area: a;
-		margin: unset;
 		margin-top: 5.5px;
 	}
 
@@ -827,12 +822,14 @@ input:focus::placeholder {
 	#current-location-wrapper {
 		grid-area: f;
 		text-align: left;
+		grid-template-columns: 261px 69px;
 	}
 
 	#theme-switch
 	{
 		grid-area: b;
-		transform: rotate(90deg);
+		transform: rotate(90deg) translateX(-10px);;
+		margin: auto;
 	}
 
 	.theme-icon
@@ -843,6 +840,7 @@ input:focus::placeholder {
 	#current-location-text-data
 	{
 		grid-area: a;
+		width: 100%;
 	}
 
 	#current-temp-tile,
@@ -1085,12 +1083,14 @@ input:focus::placeholder {
 	#current-location-wrapper {
 		grid-area: b;
 		text-align: right;
+		grid-template-columns: 69px 259px;
 	}
 
 	#theme-switch
 	{
 		grid-area: a;
-		transform: rotate(90deg);
+		transform: rotate(90deg) translateX(-10px);
+		margin: auto;
 	}
 
 	.theme-icon
