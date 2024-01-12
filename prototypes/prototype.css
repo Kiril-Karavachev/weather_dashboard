@@ -75,6 +75,14 @@ input:focus::placeholder {
 	"a b";
 }
 
+#theme-switch-flex-container
+{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
 
 #theme-switch *
 {
@@ -94,45 +102,43 @@ input:focus::placeholder {
 #theme-switch
 {
 	display: block;
-	height: 69px;
-	width: 36px;
+	width: 69px;
+	height: 36px;
 }
 
 #theme-slider
 {
-	left: calc((100% - 30px)/2);
+	top: 2px;
 	width: 30px;
 	height: 30px;
 	background-color: var(--secondary-color);
 }
 
 #theme-slider.is-light-theme{
-	bottom: 3px;
+	right: 3px;
 }
 
 #theme-slider.is-dark-theme{
-	top: 3px;
+	left: 3px;
 }
 
 .theme-icon
 {
 	width: 20px;
 	height: auto;
-	left: calc((100% - 20px)/2);
+	top: 8px;
 }
 
 #light-theme-icon
 {
-	bottom: 3px;
+	right: 5px;
 }
 
 #dark-theme-icon
 {
-	top: 3px;
+	left: 5px;
 }
 
-
-  
 .other-tile-bar {
 	position: absolute;
 	bottom: 0%;
@@ -576,13 +582,12 @@ input:focus::placeholder {
 	#current-location-wrapper {
 		grid-area: c;
 		text-align: right;
-		grid-template-columns: 37px 413px;
+		grid-template-columns: 70px 380px;
 	}
 
-	#theme-switch
+	#theme-switch-flex-container
 	{
 		grid-area: a;
-		margin-top: 5.5px;
 	}
 
 	#current-location-text-data
@@ -825,16 +830,9 @@ input:focus::placeholder {
 		grid-template-columns: 261px 69px;
 	}
 
-	#theme-switch
+	#theme-switch-flex-container
 	{
 		grid-area: b;
-		transform: rotate(90deg) translateX(-10px);;
-		margin: auto;
-	}
-
-	.theme-icon
-	{
-		transform: rotate(-90deg);
 	}
 
 	#current-location-text-data
@@ -1086,16 +1084,9 @@ input:focus::placeholder {
 		grid-template-columns: 69px 259px;
 	}
 
-	#theme-switch
+	#theme-switch-flex-container
 	{
 		grid-area: a;
-		transform: rotate(90deg) translateX(-10px);
-		margin: auto;
-	}
-
-	.theme-icon
-	{
-		transform: rotate(-90deg);
 	}
 
 	#current-location-text-data
