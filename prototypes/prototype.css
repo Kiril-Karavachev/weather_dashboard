@@ -466,6 +466,7 @@ input:focus::placeholder {
 
 #other-weather-data-wrapper {
 	display: grid;
+	position: relative;
 	grid-template-areas:
 		"a b"
 		"c d";
@@ -477,6 +478,50 @@ input:focus::placeholder {
 	flex-direction: column;
 	align-items: center;
 	align-content: center;
+	z-index: 2;
+}
+
+.other-data-graph-open {
+	position: absolute !important;
+	display: grid;
+	grid-template-areas: 
+	"a"
+	"b";
+	grid-template-rows: 70% 30%;
+	grid-gap: 10px;
+	grid-area: unset !important;
+	width: 100% !important;
+	height: 100% !important;
+	border: none !important;
+	background-color: var(--secondary-color) !important;
+	z-index: 3 !important;
+}
+
+.other-data-graph-open .other-weather-data-basic-data-wrapper
+{
+	grid-area: b;
+	transform: unset;
+}
+
+.other-data-graph-open .back-button
+{
+	display: block;
+}
+
+.weather-graph
+{
+	display: none;
+	margin: auto;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+
+.other-data-graph-open .weather-graph
+{
+	display: block;
+	width: 90%;
+	height: 90%;
+	grid-area: a;
 }
 
 .other-weather-data-basic-data-wrapper * {
@@ -493,14 +538,6 @@ input:focus::placeholder {
 
 #wind-tile {
 	grid-area: a;
-}
-
-#wind-graph,
-#uv-graph,
-#humidity-graph,
-#visibility-graph
-{
-	display: none;
 }
 
 #uv-tile {
