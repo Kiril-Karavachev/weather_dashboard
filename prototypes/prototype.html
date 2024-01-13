@@ -8,17 +8,31 @@
 </head>
 <body>
 <div id="dashboard-background">
+
+<!--Dashboard component-->
+
 	<main id="dashboard-wrapper-grid">
+
+<!--Current temperature and current date and time-->
+
 		<section id="current-temp-date-and-time-wrapper" class="main-grid-item">
 			<!--Add hourly-temp-visible in class of #current-temp-tile to expand the graph-->
+
+<!--Current temperature tile-->
+
 			<div id="current-temp-tile" class="has-border">
+			<div id="current-temp-basic-data-grid">
 				<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/sunny.svg"/>
 				<span id="current-temp-digit">25°C</span>
 				<span id="chances-of-rain">Chance of rain: 43%</span>
+			</div>
 				<!--Remove style="display: block/none; when ready"-->
 				<button style="display: none;" type="button" id="back-button-temp" class="back-button has-border">
 					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
 				</button>
+
+<!--Hourly temperature component-->
+
 				<div id="temp-graph-scroll-box">
 				<!--Add hourly-temp-graph-visible in class of #hourly-temp-graph to show graph-->
 				<!--Add hourly-temp-graph-hidden in class of #hourly-temp-graph to hide graph-->
@@ -86,6 +100,9 @@
 			</div>
 			</div>
 			</div>
+
+<!--Date and time tile-->
+
 			<div id="date-and-time-tile" class="has-border">
 				<div id="date-data">
 					<span id="current-day-of-the-week" class="date-data-to-the-left">Monday</span>
@@ -95,6 +112,9 @@
 				</div>
 			</div>
 		</section>
+
+<!--Search bar component-->
+
 		<section id="search-bar-wrapper" class="main-grid-item">
 			<input id="search-location-bar" class="has-border" type="text" placeholder="Search location..."/>
 			<div id="search-drop-down-menu-wrapper" class="drop-down-closed has-border">
@@ -105,6 +125,9 @@
 				<span class="search-result-line">Other, Country</span>
 			</div>
 		</section>
+
+<!--Current location and theme selector-->
+
 		<section id="current-location-wrapper" class="main-grid-item">
 		<div id="theme-switch-flex-container">
 			<div id="theme-switch" class="has-border">
@@ -118,6 +141,9 @@
 				<span id="current-country">Bulgaria</span>
 			</span>
 		</section>
+
+<!--Sun state component-->
+
 		<section id="sun-state-wrapper" class="main-grid-item order-sunrise-sunset has-border">
 			<div id="sunrise-info-wrapper" class="sun-info-text">
 				<span id="sunrise-info-title">Sunrise:</span>
@@ -131,6 +157,9 @@
 				<span id="sunset-info-time">17:08</span>
 			</div>
 		</section>
+
+<!--The next five days component-->
+
 		<section id="five-day-forecast-wrapper" class="main-grid-item   has-border">
 			<span id="the-next-five-days-title">the next 5 days</span>
 			<div class="day-plus-wrapper">
@@ -169,7 +198,13 @@
 				<span class="day-plus-day-of-the-week-is"> Saturday</span>
 			</div>
 		</section>
+
+<!--Other weather data component-->
+
 		<section id="other-weather-data-wrapper" class="main-grid-item has-border">
+
+<!--Wind tile component-->
+
 			<div id="wind-tile" class="other-tile  has-border  other-data-graph-open">
 				<button type="button" id="back-button-wind" class="back-button has-border">
 					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
@@ -215,6 +250,9 @@
 					</div>
 				</div>
 			</div>
+
+<!--UV tile component-->
+
 			<div id="uv-tile" class="other-tile  has-border">
 				<div id="uv-tile-bar" class="other-tile-bar"></div>
 				<button type="button" id="back-button-uv" class="back-button has-border">
@@ -231,6 +269,9 @@
 					</div>
 				</div>
 			</div>
+
+<!--Humidity tile component-->
+
 			<div id="humidity-tile" class="other-tile  has-border">
 				<div id="humidity-tile-bar" class="other-tile-bar"></div>
 				<button type="button" id="back-button-humidity" class="back-button">
@@ -247,6 +288,9 @@
 				</div>
 				</div>
 			</div>
+
+<!--Visibility tile component-->
+
 			<div id="visibility-tile" class="other-tile  has-border">
 				<button type="button" id="back-button-visibility" class="back-button">
 					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
