@@ -572,6 +572,11 @@ span {
 	padding-left: 10px;
 }
 
+.other-data-graph-closed #wind-graph
+{
+	display: none;
+}
+
 .wind-graph-digits {
 	font-size: 14px;
 	left: 50%;
