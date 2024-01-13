@@ -21,84 +21,82 @@
 <!--Current temperature tile-->
 
 			<div id="current-temp-tile" class="has-border">
-			<div id="current-temp-basic-data-grid">
-				<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/sunny.svg"/>
-				<span id="current-temp-digit">25°C</span>
-				<span id="chances-of-rain">Chance of rain: 43%</span>
-			</div>
-				<!--Remove style="display: block/none; when ready"-->
-				<button style="display: none;" type="button" id="back-button-temp" class="back-button has-border">
-					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
-				</button>
-
-<!--Hourly temperature component-->
+				<!--Hourly temperature component-->
 
 				<div id="temp-graph-scroll-box">
-				<!--Add hourly-temp-graph-visible in class of #hourly-temp-graph to show graph-->
-				<!--Add hourly-temp-graph-hidden in class of #hourly-temp-graph to hide graph-->
-				<div id="hourly-temp-graph" class="hourly-temp-graph-hidden">
-					<div class="hourly-temp">
-						<span class="hourly-temp-is">25°C</span>
-						<div class="hourly-temp-candle-box">
-							<!--Formula is (current temperature/50) * 100-->
-							<!--height: 100%; for the hourly-temp-candle is 50°C, so anything above 50°C will be height: 100%;-->
-							<div style="height: 50%;" class="hourly-temp-candle has-border"></div>
+					<div id="hourly-temp-graph">
+						<div class="hourly-temp">
+							<span class="hourly-temp-is">25°C</span>
+							<div class="hourly-temp-candle-box">
+								<!--Formula is (current temperature/50) * 100-->
+								<!--height: 100%; for the hourly-temp-candle is 50°C, so anything above 50°C will be height: 100%;-->
+								<div style="height: 50%;" class="hourly-temp-candle"></div>
+							</div>
+							<span class="hourly-temp-hour-is">14:00</span>
 						</div>
-						<span class="hourly-temp-hour-is">14:00</span>
-					</div>
-					<div class="hourly-temp">
-						<span class="hourly-temp-is">26°C</span>
-						<div class="hourly-temp-candle-box">
-							<div style="height: 52%;" class="hourly-temp-candle has-border"></div>
+						<div class="hourly-temp">
+							<span class="hourly-temp-is">26°C</span>
+							<div class="hourly-temp-candle-box">
+								<div style="height: 52%;" class="hourly-temp-candle"></div>
+							</div>
+							<span class="hourly-temp-hour-is">15:00</span>
 						</div>
-						<span class="hourly-temp-hour-is">15:00</span>
-					</div>
-					<div class="hourly-temp">
-						<span class="hourly-temp-is">27°C</span>
-						<div class="hourly-temp-candle-box">
-							<div style="height: 54%;" class="hourly-temp-candle has-border"></div>
+						<div class="hourly-temp">
+							<span class="hourly-temp-is">27°C</span>
+							<div class="hourly-temp-candle-box">
+								<div style="height: 54%;" class="hourly-temp-candle"></div>
+							</div>
+							<span class="hourly-temp-hour-is">16:00</span>
 						</div>
-						<span class="hourly-temp-hour-is">16:00</span>
-					</div>
-					<div class="hourly-temp">
-						<span class="hourly-temp-is">24°C</span>
-						<div class="hourly-temp-candle-box">
-							<div style="height: 48%;" class="hourly-temp-candle has-border"></div>
+						<div class="hourly-temp">
+							<span class="hourly-temp-is">24°C</span>
+							<div class="hourly-temp-candle-box">
+								<div style="height: 48%;" class="hourly-temp-candle"></div>
+							</div>
+							<span class="hourly-temp-hour-is">17:00</span>
 						</div>
-						<span class="hourly-temp-hour-is">17:00</span>
-					</div>
-					<div class="hourly-temp">
-						<span class="hourly-temp-is">23°C</span>
-						<div class="hourly-temp-candle-box">
-							<div style="height: 46%;" class="hourly-temp-candle has-border"></div>
+						<div class="hourly-temp">
+							<span class="hourly-temp-is">23°C</span>
+							<div class="hourly-temp-candle-box">
+								<div style="height: 46%;" class="hourly-temp-candle"></div>
+							</div>
+							<span class="hourly-temp-hour-is">18:00</span>
 						</div>
-						<span class="hourly-temp-hour-is">18:00</span>
-					</div>
-					<div class="hourly-temp">
-						<span class="hourly-temp-is">23°C</span>
-						<div class="hourly-temp-candle-box">
-							<div style="height: 46%;" class="hourly-temp-candle has-border"></div>
+						<div class="hourly-temp">
+							<span class="hourly-temp-is">23°C</span>
+							<div class="hourly-temp-candle-box">
+								<div style="height: 46%;" class="hourly-temp-candle"></div>
+							</div>
+							<span class="hourly-temp-hour-is">19:00</span>
 						</div>
-						<span class="hourly-temp-hour-is">19:00</span>
-					</div>
-					<div class="hourly-temp">
-						<span class="hourly-temp-is">22°C</span>
-						<div class="hourly-temp-candle-box">
-							<div style="height: 44%;" class="hourly-temp-candle has-border"></div>
+						<div class="hourly-temp">
+							<span class="hourly-temp-is">22°C</span>
+							<div class="hourly-temp-candle-box">
+								<div style="height: 44%;" class="hourly-temp-candle"></div>
+							</div>
+							<span class="hourly-temp-hour-is">20:00</span>
 						</div>
-						<span class="hourly-temp-hour-is">20:00</span>
-					</div>
-					<div class="hourly-temp">
-						<span class="hourly-temp-is">-20°C</span>
-						<div class="hourly-temp-candle-box temp-is-below-zero">
-							<div style="height: 40%;" class="hourly-temp-candle has-border"></div>
+						<div class="hourly-temp">
+							<span class="hourly-temp-is">-20°C</span>
+							<div class="hourly-temp-candle-box temp-is-below-zero">
+								<div style="height: 40%;" class="hourly-temp-candle"></div>
+							</div>
+							<span class="hourly-temp-hour-is">21:00</span>
 						</div>
-						<span class="hourly-temp-hour-is">21:00</span>
+						<div id="hourly-temp-graph-x-axis-line">
 					</div>
-					<div id="hourly-temp-graph-x-axis-line">
+				</div>
+
+				<div id="current-temp-basic-data-grid">
+					<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/light-theme-icons/sunny.svg"/>
+					<span id="current-temp-digit">25°C</span>
+					<span id="chances-of-rain">Chance of rain: 43%</span>
 				</div>
 			</div>
-			</div>
+			<button type="button" id="back-button-temp" class="back-button has-border">
+				<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-theme-icons/light-theme-left-arrow.svg"/>
+			</button>
+			<div title="Click for more information about this tile." class="more-info-icon has-border">i</div>
 			</div>
 
 <!--Date and time tile-->
@@ -131,8 +129,8 @@
 		<section id="current-location-wrapper" class="main-grid-item">
 		<div id="theme-switch-flex-container">
 			<div id="theme-switch" class="has-border">
-				<img id="light-theme-icon" class="theme-icon" src="../weather_dashboard/src/icons/light-sun-icon.svg"/>
-				<img id="dark-theme-icon" class="theme-icon" src="../weather_dashboard/src/icons/dark-moon-icon.svg"/>
+				<img alt="Light theme icon (a sun icon)." id="light-theme-icon" class="theme-icon" src="../weather_dashboard/src/icons/light-theme-icons/light-theme-sun-icon.svg"/>
+				<img alt="Dark theme icon (a moon icon)." id="dark-theme-icon" class="theme-icon" src="../weather_dashboard/src/icons/light-theme-icons/light-theme-moon-icon.svg"/>
 				<div id="theme-slider" class="is-light-theme has-border"></div>
 			</div>
 		</div>
@@ -150,7 +148,7 @@
 				<span id="sunrise-info-time">07:57</span>
 			</div>
 			<div id="sun-or-moon-path" class="has-border">
-				<img id="sun-or-moon-icon" alt="A sun or a moon icon." src="../weather_dashboard/src/icons/dark-sun-icon.svg"/>
+				<img id="sun-or-moon-icon" alt="A sun (or a moon icon) used to display the sunrise and sunset states." src="../weather_dashboard/src/icons/light-theme-icons/light-theme-sun-icon.svg"/>
 			</div>
 			<div id="sunset-info-wrapper" class="sun-info-text">
 				<span id="sunset-info-title">Sunset:</span>
@@ -163,35 +161,35 @@
 		<section id="five-day-forecast-wrapper" class="main-grid-item   has-border">
 			<span id="the-next-five-days-title">the next 5 days</span>
 			<div class="day-plus-wrapper">
-				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/less-cloudy.svg"/>
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
 				<span class="day-plus-max-temp">+24°/</span>
 				<span class="day-plus-min-temp">+15°</span>
 				<span class="day-plus-day-and-month-are">07 JAN,</span>
 				<span class="day-plus-day-of-the-week-is"> Tuesday</span>
 			</div>
 			<div class="day-plus-wrapper">
-				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/less-cloudy.svg"/>
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
 				<span class="day-plus-max-temp">+23°/</span>
 				<span class="day-plus-min-temp">+11°</span>
 				<span class="day-plus-day-and-month-are">08 JAN,</span>
 				<span class="day-plus-day-of-the-week-is"> Wednesday</span>
 			</div>
 			<div class="day-plus-wrapper">
-				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/less-cloudy.svg"/>
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
 				<span class="day-plus-max-temp">+20°/</span>
 				<span class="day-plus-min-temp">+7°</span>
 				<span class="day-plus-day-and-month-are">09 JAN,</span>
 				<span class="day-plus-day-of-the-week-is"> Thursday</span>
 			</div>
 			<div class="day-plus-wrapper">
-				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/cloudy.svg"/>
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/light-theme-icons/cloudy.svg"/>
 				<span class="day-plus-max-temp">+21°/</span>
 				<span class="day-plus-min-temp">+9°</span>
 				<span class="day-plus-day-and-month-are">10 JAN,</span>
 				<span class="day-plus-day-of-the-week-is"> Friday</span>
 			</div>
 			<div class="day-plus-wrapper">
-				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/light-rain-sunny.svg"/>
+				<img class="day-plus-icon" alt="Small weather icon." src="../weather_dashboard/src/icons/light-theme-icons/light-rain-sunny.svg"/>
 				<span class="day-plus-max-temp">+18°/</span>
 				<span class="day-plus-min-temp">+6°</span>
 				<span class="day-plus-day-and-month-are">11 JAN,</span>
@@ -207,7 +205,7 @@
 			<!--other-data-graph-closed or other-data-graph-open-->
 			<div id="wind-tile" class="other-tile has-border other-data-graph-closed">
 				<button type="button" id="back-button-wind" class="back-button has-border">
-					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
+					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-theme-icons/light-theme-left-arrow.svg"/>
 				</button>
 				<div id="wind-graph" class="weather-graph">
 					<div class="wind-speed-column has-border">
@@ -249,22 +247,17 @@
 						<span id="wind-tile-title" class="other-data-tile-title">Wind</span>
 					</div>
 				</div>
+				<div title="Click for more information about this tile." class="more-info-icon has-border">i</div>
 			</div>
 
 <!--UV tile component-->
 
-			<div id="uv-tile" class="other-tile  has-border">
+			<div id="uv-tile" class="other-tile  has-border other-data-graph-closed">
 				<div id="uv-tile-bar" class="other-tile-bar"></div>
-				<button type="button" id="back-button-uv" class="back-button has-border">
-					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
-				</button>
-				<div id="uv-graph" class="weather-graph">
-					<span title="Add svg here."></span>
-				</div>
 				<div id="current-uv-data" class="other-weather-data-basic-data-wrapper">
 					<div class="value-unit-wrapper">
 						<span id="current-uv-number" class="other-weather-data-number">5.50</span>
-						<span id="current-uv-units" class="other-weather-data-units">uv</span>
+						<!-- <span id="current-uv-units" class="other-weather-data-units">uv</span> -->
 						<span id="uv-tile-title" class="other-data-tile-title">UV</span>
 					</div>
 				</div>
@@ -272,14 +265,8 @@
 
 <!--Humidity tile component-->
 
-			<div id="humidity-tile" class="other-tile  has-border">
+			<div id="humidity-tile" class="other-tile  has-border other-data-graph-closed">
 				<div id="humidity-tile-bar" class="other-tile-bar"></div>
-				<button type="button" id="back-button-humidity" class="back-button">
-					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
-				</button>
-				<div id="humidity-graph" class="weather-graph">
-					<span title="Add svg here."></span>
-				</div>
 				<div id="current-humidity-data" class="other-weather-data-basic-data-wrapper">
 				<div class="value-unit-wrapper">
 					<span id="current-humidity-number" class="other-weather-data-number">83</span>
@@ -290,14 +277,7 @@
 			</div>
 
 <!--Visibility tile component-->
-
 			<div id="visibility-tile" class="other-tile  has-border">
-				<button type="button" id="back-button-visibility" class="back-button">
-					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-arrow-left-icon.svg"/>
-				</button>
-				<div id="visibility-graph" class="weather-graph">
-					<span title="Add svg here."></span>
-				</div>
 				<div id="current-visibility-data" class="other-weather-data-basic-data-wrapper">
 				<div class="value-unit-wrapper">
 					<span id="current-visibility-number" class="other-weather-data-number">3</span>
