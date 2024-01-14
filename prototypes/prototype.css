@@ -209,25 +209,25 @@ span {
 	transform: translateY(15%);
 }
 
-#current-temp-tile.hourly-temp-visible {
+#current-temp-tile.graph-open {
 	min-width: 100%;
 }
 
-#current-temp-tile.hourly-temp-visible #current-temp-basic-data-grid {
+#current-temp-tile.graph-open #current-temp-basic-data-grid {
 	opacity: 0;
 	pointer-events: none;
 }
 
-#current-temp-tile.hourly-temp-visible {
+#current-temp-tile.graph-open {
 	cursor: default;
 }
 
-#current-temp-tile.hourly-temp-visible #back-button-temp
+#current-temp-tile.graph-open #back-button-temp
 {
 	display: block;
 }
 
-#current-temp-tile.hourly-temp-visible .more-info-icon
+#current-temp-tile.graph-open .more-info-icon
 {
 	transform: scale(0);
 	pointer-events: none;
@@ -241,13 +241,13 @@ span {
 	width: 100%;
 }
 
-.hourly-temp-visible {
+#current-temp-tile.graph-open {
 	width: 100%;
 }
 
 /*Hourly temperature component------------------------------------------------------------*/
 
-#temp-graph-scroll-box {
+#current-temp-tile.graph-open #temp-graph-scroll-box {
 	position: relative;
 	height: 100%;
 	overflow-x: scroll;
@@ -256,7 +256,12 @@ span {
 	width: 100%;
 }
 
-.open-graph-title
+#current-temp-tile.graph-closed #temp-graph-scroll-box {
+	display: none;
+}
+
+
+.graph-open .open-graph-title
 {
 	position: absolute;
 	display: block;
@@ -268,6 +273,11 @@ span {
 	padding: 5px;
 	text-align: center;
 	text-decoration: dotted underline;
+}
+
+.graph-closed .open-graph-title
+{
+	display: none;
 }
 
 
@@ -558,7 +568,7 @@ span {
 	width: 100%;
 }
 
-.other-data-graph-open {
+.other-tile.graph-open {
 	background-color: var(--secondary-color) !important;
 	border: none !important;
 	display: flex;
@@ -572,23 +582,23 @@ span {
 	z-index: 3 !important;
 }
 
-.other-data-graph-open .more-info-icon
+.other-tile.graph-open .more-info-icon
 {
 	transform: scale(0);
 	pointer-events: none;
 }
 
-.other-data-graph-open .back-button {
+.other-tile.graph-open .back-button {
 	display: block;
 }
 
-.other-data-graph-open .weather-graph {
+.other-tile.graph-open .weather-graph {
 	display: block;
 	height: 80%;
 	width: 90%;
 }
 
-.other-data-graph-open .other-weather-data-basic-data-wrapper
+.other-tile.graph-open .other-weather-data-basic-data-wrapper
 {
 	display: none;
 }
@@ -643,7 +653,7 @@ span {
 	grid-area: a;
 }
 
-#wind-graph {
+.other-tile.graph-open .weather-graph{
 	align-items: center;
 	display: flex;
 	flex-direction: row;
@@ -651,7 +661,7 @@ span {
 	padding-left: 10px;
 }
 
-.other-data-graph-closed #wind-graph
+.other-tile.graph-closed .weather-graph
 {
 	display: none;
 }
