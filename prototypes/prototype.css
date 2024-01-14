@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 :root {
 	
@@ -86,23 +87,26 @@ span {
 
 .back-button {
 	background-color: var(--main-color);
-	border-radius: 0px 20px 20px 0px !important;
-	cursor: pointer;
 	display: none;
-	height: 65px;
-	left: 0%;
+	height: 30px;
+	left: 5px;
 	position: absolute;
-	top: calc((100% - 65px)/2);
+	top: 5px;
 	width: 30px;
 	z-index: 2;
 }
 
 .back-button-arrow {
 	height: 15px;
-	left: calc((100% - 20px)/2);
+	left: 5px;
 	position: absolute;
 	top: calc((100% - 15px)/2);
 	width: 15px;
+}
+
+.back-button *
+{
+	cursor: pointer;
 }
 
 .more-info-icon
@@ -218,6 +222,17 @@ span {
 	cursor: default;
 }
 
+#current-temp-tile.hourly-temp-visible #back-button-temp
+{
+	display: block;
+}
+
+#current-temp-tile.hourly-temp-visible .more-info-icon
+{
+	transform: scale(0);
+	pointer-events: none;
+}
+
 #chances-of-rain {
 	bottom: 5px;
 	font-size: 14px;
@@ -233,6 +248,7 @@ span {
 /*Hourly temperature component------------------------------------------------------------*/
 
 #temp-graph-scroll-box {
+	position: relative;
 	height: 100%;
 	overflow-x: scroll;
 	overflow-y: hidden;
@@ -240,27 +256,20 @@ span {
 	width: 100%;
 }
 
-#current-temp-tile #temp-graph-scroll-box #hourly-temp-graph
+.open-graph-title
 {
-	opacity: 0;
-	width: 0%;
+	position: absolute;
+	display: block;
+	height: 30px;
+	width: fit-content;
+	top: 5px;
+	right: 5px;
+	font-size: 12px;
+	padding: 5px;
+	text-align: center;
+	text-decoration: dotted underline;
 }
 
-#current-temp-tile.hourly-temp-visible #temp-graph-scroll-box #hourly-temp-graph
-{
-	opacity: 1;
-	width: 100%;
-}
-
-#current-temp-tile.hourly-temp-visible .back-button
-{
-	display: block !important;
-}
-
-#current-temp-tile.hourly-temp-visible .more-info-icon
-{
-	transform: scale(0);
-}
 
 #hourly-temp-graph {
 	align-items: center;
@@ -269,69 +278,87 @@ span {
 	flex-direction: row;
 	gap: 20px;
 	height: 100%;
-	justify-content: center;
-	left: 0%;
-	overflow: hidden;
+	left: 0;
 	position: absolute;
 	top: 0%;
 	transform-origin: left;
-}
-
-.hourly-temp {
-	border: solid 1px var(--main-color);
-	height: 70%;
-	position: relative;
-	width: 28px;
-}
-
-.hourly-temp-is, .hourly-temp-hour-is {
-	display: block;
-	font-size: 12px;
-	height: fit-content;
-	left: 50%;
-	position: absolute;
-	text-align: center;
-	transform: translateX(-50%);
-	width: -moz-fit-content;
-	width: fit-content;
-}
-
-.hourly-temp-is {
-	bottom: calc(100% + 1px);
-}
-
-.hourly-temp-hour-is {
-	top: calc(100% + 1px);
-}
-
-.hourly-temp-candle-box {
-	height: calc(50% + 2px);
-	max-height: calc(50% + 2px);
-	position: absolute;
-	transform-origin: bottom;
 	width: 100%;
+	padding: 0px 5px 0px 5px;
 }
 
-.hourly-temp-candle {
+#temp-graph-scroll-box::-webkit-scrollbar-thumb {
 	background: var(--main-color);
-	border-bottom: none;
-	border-radius: 0%;
-	bottom: 0%;
-	position: absolute;
+	border-radius: 10px;
+}
+
+#temp-graph-scroll-box::-webkit-scrollbar-track {
+	background: var(--secondary-color);
+}
+
+.hourly-temp
+{
+	width: 50px;
+	height: 80px;
+	display: grid;
+	grid-template-areas: "a" "b" "c" "d";
+	grid-template-rows: 15px 35px 15px 15px;
+	gap: 5px;
+}
+
+.hourly-temp > *
+{
+	display: block;
+	margin: auto;
 	width: 100%;
+	height: 100%;
 }
 
-.temp-is-below-zero {
-	transform: scaleY(-1);
+.hourly-rain
+{
+	grid-area: c;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 3px;
 }
 
-#hourly-temp-graph-x-axis-line {
-	background-color: var(--main-color);
-	height: 2px;
-	left: 0%;
-	min-width: 100%;
-	position: absolute;
-	top: calc(50% + 1px);
+.rain-chance-drop
+{
+	height: 100%;
+	width: auto;
+}
+
+.hourly-temp-is
+{
+	grid-area: a;
+}
+
+.hourly-temp-is,
+.hourly-temp-hour-is
+{
+	position: relative;
+	left: -50%;
+	transform: translateX(50%);
+	text-align: center;
+}
+
+.hourly-icon-box
+{
+	grid-area: b;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.hourly-temp-hour-is
+{
+	grid-area: d;
+}
+
+.hourly-icon
+{
+	width: auto;
+	height: 100%;
 }
 
 /*Search bar component--------------------------------------------------------------------*/
@@ -536,6 +563,12 @@ span {
 	z-index: 3 !important;
 }
 
+.other-data-graph-open .more-info-icon
+{
+	transform: scale(0);
+	pointer-events: none;
+}
+
 .other-data-graph-open .other-weather-data-basic-data-wrapper {
 	grid-area: b;
 	transform: unset;
@@ -588,23 +621,6 @@ span {
 	display: block;
 }
 
-.SVG-graph-wrapper
-{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin: auto;
-}
-
-.svg-graph
-{
-	width: 100%;
-	height: auto;
-}
-
 /*Wind tile component---------------------------------------------------------------------*/
 
 #wind-tile {
@@ -624,45 +640,109 @@ span {
 	display: none;
 }
 
-.wind-graph-digits {
+.wind-hour-box
+{
+	display: grid;
+	width: 50px;
+	height: 80px;
+	grid-template-areas: "a" "b" "c";
+	gap: 14px;
+	overflow: visible;
+}
+
+.wind-hour-box > *
+{
+	margin: auto;
+	width: 100%;
+	height: 100%;
+}
+
+.wind-hour-speed
+{
+	grid-area: a;
 	font-size: 14px;
-	left: 50%;
-	position: absolute;
-	transform: translateX(-50%);
+	text-align: center;
 }
 
-.wind-speed-column {
-	border-radius: 0;
-}
-
-.wind-speed-index {
-	background-color: var(--main-color);
-	bottom: 0%;
-	height: 50%;
-	position: absolute;
-	width: 100%;
-}
-
-.wind-speed-will-be {
-	bottom: 100%;
-}
-
-.wind-hour-is {
-	top: 100%;
-}
-
-#wind-graph-x-axis-line {
-	background-color: var(--main-color);
-	bottom: 15%;
-	height: 2px;
-	position: absolute;
-	width: 100%;
-}
-
-.wind-speed-column {
-	height: 70%;
+.wind-compass
+{
+	grid-area: b;
+	border: solid 1px var(--main-color);
+	border-radius: 100%;
 	position: relative;
-	width: 25px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.wind-hour-hour
+{
+	grid-area: c;
+	font-size: 14px;
+	text-align: center;
+}
+
+.compass-direction
+{
+	font-size: 12px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 12px;
+	width: 12px;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.north{
+	bottom: calc(100% + 2px);
+	left: calc((100% - 12px)/2);
+}
+
+.west{
+	top: calc((100% - 12px)/2);
+	right: calc(100% + 2px);
+}
+
+.south{
+	top: calc(100% + 2px);
+	left: calc((100% - 12px)/2);
+}
+
+.east{
+	top: calc((100% - 12px)/2);
+	left: calc(100% + 2px);
+}
+
+.compass-arrow
+{
+	height: 90%;
+	transform-origin: center;
+	transform: rotate(180deg);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.arrow-head{
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid var(--main-color);
+}
+
+.arrow-tail
+{
+	background-color: var(--main-color);
+	width: 2px;
+	height: 70%;
 }
 
 /*UV tile component-----------------------------------------------------------------------*/
@@ -746,6 +826,12 @@ span {
 
 #current-temp-digit {
 	font-size: 64px;
+}
+
+/*Hourly temperature graph------------------------------------------------------------------*/
+
+#temp-graph-scroll-box::-webkit-scrollbar:horizontal {
+	height: 10px;
 }
 
 /*Date and time tile----------------------------------------------------------------------*/
@@ -964,6 +1050,12 @@ span {
 
 #current-temp-digit {
 	font-size: 48px;
+}
+
+/*Hourly temperature graph------------------------------------------------------------------*/
+
+#temp-graph-scroll-box::-webkit-scrollbar:horizontal {
+	height: 8px;
 }
 
 /*Date and time tile----------------------------------------------------------------------*/
@@ -1222,10 +1314,14 @@ span {
 
 #hourly-temp-graph {
 	overflow: hidden;
-	padding: 0px 30px 0px 30px;
 	width: -moz-fit-content;
 	width: fit-content;
 }
+
+#temp-graph-scroll-box::-webkit-scrollbar:horizontal {
+	height: 6px;
+}
+
 
 /*Date and time tile----------------------------------------------------------------------*/
 
