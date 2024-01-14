@@ -318,19 +318,21 @@ span {
 	grid-area: c;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	justify-content: center;
 	gap: 3px;
 }
 
 .rain-chance-drop
 {
-	height: 100%;
+	height: 80%;
 	width: auto;
 }
 
 .hourly-temp-is
 {
 	grid-area: a;
+	font-size: 18px;
 }
 
 .hourly-temp-is,
@@ -353,12 +355,18 @@ span {
 .hourly-temp-hour-is
 {
 	grid-area: d;
+	font-size: 14px;
+}
+
+.hourly-rain-digit
+{
+	font-size: 12px;
 }
 
 .hourly-icon
 {
 	width: auto;
-	height: 100%;
+	height: 80%;
 }
 
 /*Search bar component--------------------------------------------------------------------*/
@@ -553,10 +561,11 @@ span {
 .other-data-graph-open {
 	background-color: var(--secondary-color) !important;
 	border: none !important;
-	display: grid;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	grid-area: unset !important;
-	grid-template-areas: "a""b";
-	grid-template-rows: 65% 35%;
 	height: 100% !important;
 	position: absolute !important;
 	width: 100% !important;
@@ -569,21 +578,19 @@ span {
 	pointer-events: none;
 }
 
-.other-data-graph-open .other-weather-data-basic-data-wrapper {
-	grid-area: b;
-	transform: unset;
-}
-
 .other-data-graph-open .back-button {
 	display: block;
 }
 
 .other-data-graph-open .weather-graph {
 	display: block;
-	grid-area: a;
-	height: 60%;
-	width: 80%;
-	transform: translateY(10%);
+	height: 80%;
+	width: 90%;
+}
+
+.other-data-graph-open .other-weather-data-basic-data-wrapper
+{
+	display: none;
 }
 
 .weather-graph {
@@ -592,6 +599,15 @@ span {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	position: relative;
+}
+
+.weather-graph::-webkit-scrollbar-thumb {
+	background: var(--main-color);
+	border-radius: 10px;
+}
+
+.weather-graph::-webkit-scrollbar-track {
+	background: var(--secondary-color);
 }
 
 .other-weather-data-basic-data-wrapper * {
@@ -631,7 +647,7 @@ span {
 	align-items: center;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	gap: 35px;
 	padding-left: 10px;
 }
 
@@ -643,25 +659,29 @@ span {
 .wind-hour-box
 {
 	display: grid;
-	width: 50px;
-	height: 80px;
 	grid-template-areas: "a" "b" "c";
-	gap: 14px;
+	gap: 20px;
 	overflow: visible;
+	min-width: 50px;
 }
 
 .wind-hour-box > *
 {
 	margin: auto;
-	width: 100%;
-	height: 100%;
 }
 
 .wind-hour-speed
 {
 	grid-area: a;
-	font-size: 14px;
+	font-size: 18px;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.unit-span
+{
+	font-size: 10px;
 }
 
 .wind-compass
@@ -670,8 +690,8 @@ span {
 	border: solid 1px var(--main-color);
 	border-radius: 100%;
 	position: relative;
-	width: 40px;
-	height: 40px;
+	width: 35px;
+	height: 35px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -723,7 +743,6 @@ span {
 {
 	height: 90%;
 	transform-origin: center;
-	transform: rotate(180deg);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -743,6 +762,34 @@ span {
 	background-color: var(--main-color);
 	width: 2px;
 	height: 70%;
+}
+
+.go-north{
+	transform: rotate(90deg);
+}
+
+.go-north-west{
+	transform: rotate(-45deg);
+}
+
+.go-west{
+	transform: rotate(-90deg);
+}
+
+.go-south-west{
+	transform: rotate(-135deg);
+}
+
+.go-south{
+	transform: rotate(180deg);
+}
+
+.go-north-east{
+	transform: rotate(45deg);
+}
+
+.go-east{
+	transform: rotate(90deg);
 }
 
 /*UV tile component-----------------------------------------------------------------------*/
@@ -1006,6 +1053,11 @@ span {
 .other-data-tile-title {
 	font-size: 24px;
 }
+
+.weather-graph::-webkit-scrollbar:horizontal {
+	height: 10px;
+}
+
 }
 
 @media (min-width: 715px) and (max-width: 1299px) {
@@ -1249,6 +1301,10 @@ span {
 
 .other-data-tile-title {
 	font-size: 18wpx;
+}
+
+.weather-graph::-webkit-scrollbar:horizontal {
+	height: 8px;
 }
 
 }
@@ -1512,6 +1568,10 @@ span {
 
 .other-data-tile-title {
 	font-size: 18wpx;
+}
+
+.weather-graph::-webkit-scrollbar:horizontal {
+	height: 6px;
 }
 
 }
