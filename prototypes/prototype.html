@@ -20,7 +20,7 @@
 
 <!--Current temperature tile-->
 
-			<div id="current-temp-tile" class="has-border hourly-temp-visible">
+			<div id="current-temp-tile" class="has-border graph-open">
 				<!--Hourly temperature component-->
 				<span id="hourly-temp-title" class="open-graph-title">Showing the weather in the next 12 hours</span>
 				<div id="temp-graph-scroll-box">
@@ -160,11 +160,11 @@
 						<div id="hourly-temp-graph-x-axis-line">
 					</div>
 				</div>
-				<div id="current-temp-basic-data-grid">
-					<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/light-theme-icons/sunny.svg"/>
-					<span id="current-temp-digit">25°C</span>
-					<span id="chances-of-rain">Chance of rain: 43%</span>
-				</div>
+			</div>
+			<div id="current-temp-basic-data-grid">
+				<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/light-theme-icons/sunny.svg"/>
+				<span id="current-temp-digit">25°C</span>
+				<span id="chances-of-rain">Chance of rain: 43%</span>
 			</div>
 			<button type="button" title="Go back." id="back-button-temp" class="back-button has-border">
 				<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-theme-icons/light-theme-left-arrow.svg"/>
@@ -275,8 +275,8 @@
 		<section id="other-weather-data-wrapper" class="main-grid-item has-border">
 
 <!--Wind tile component-->
-			<!--other-data-graph-closed or other-data-graph-open-->
-			<div id="wind-tile" class="other-tile has-border other-data-graph-open">
+			<!--graph-closed or graph-open-->
+			<div id="wind-tile" class="other-tile has-border graph-open">
 				<span id="hourly-temp-title" class="open-graph-title">Showing the wind speed for the next 6 hours</span>
 				<button type="button" title="Go back." id="back-button-wind" class="back-button has-border">
 					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-theme-icons/light-theme-left-arrow.svg"/>
@@ -419,5 +419,29 @@
 <!--Bottom box to expand the whitespace of the page-->
 <div id="bottom-padding-mobile"></div>
 </body>
+<script>
+	const back_buttons = document.getElementsByClassName('back-button');
+	const back_button_keys = Object.keys(back_buttons);
+	const info_buttons = document.getElementsByClassName('more-info-icon');
+	const info_button_keys = Object.keys(info_buttons);
+
+	back_button_keys.forEach(button_key => {
+		const goBack = () => {
+			const parent = back_buttons[button_key].parentNode;
+			parent.classList.remove('graph-open');
+			parent.classList.add('graph-closed');
+		};
+		back_buttons[button_key].addEventListener('click', goBack);
+	});
+
+	info_button_keys.forEach(info_key => {
+		const openGraph = () => {
+			const parent = info_buttons[info_key].parentNode;
+			parent.classList.remove('graph-closed');
+			parent.classList.add('graph-open');
+		};
+		info_buttons[info_key].addEventListener('click', openGraph);
+	});
+</script>
 </html>
 
