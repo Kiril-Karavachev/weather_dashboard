@@ -20,83 +20,156 @@
 
 <!--Current temperature tile-->
 
-			<div id="current-temp-tile" class="has-border">
+			<div id="current-temp-tile" class="has-border hourly-temp-visible">
 				<!--Hourly temperature component-->
-
+				<span id="hourly-temp-title" class="open-graph-title">Showing the weather in the next 12 hours</span>
 				<div id="temp-graph-scroll-box">
 					<div id="hourly-temp-graph">
 						<div class="hourly-temp">
 							<span class="hourly-temp-is">25°C</span>
-							<div class="hourly-temp-candle-box">
-								<!--Formula is (current temperature/50) * 100-->
-								<!--height: 100%; for the hourly-temp-candle is 50°C, so anything above 50°C will be height: 100%;-->
-								<div style="height: 50%;" class="hourly-temp-candle"></div>
+							<div class="hourly-icon-box">
+								<img class="hourly-icon" src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
 							</div>
 							<span class="hourly-temp-hour-is">14:00</span>
+								<div class="hourly-rain">
+								<img class="rain-chance-drop" alt="Water drop icon. Represents rain chance." src="../weather_dashboard/src/icons/light-theme-icons/humid.svg"/>
+								<span class="hourly-rain-digit">0%</span>
+							</div>
 						</div>
 						<div class="hourly-temp">
 							<span class="hourly-temp-is">26°C</span>
-							<div class="hourly-temp-candle-box">
-								<div style="height: 52%;" class="hourly-temp-candle"></div>
+							<div class="hourly-icon-box">
+								<img class="hourly-icon" src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>								
 							</div>
 							<span class="hourly-temp-hour-is">15:00</span>
+							<div class="hourly-rain">
+								<img class="rain-chance-drop" alt="Water drop icon. Represents rain chance." src="../weather_dashboard/src/icons/light-theme-icons/humid.svg"/>
+								<span class="hourly-rain-digit">0%</span>
+							</div>
 						</div>
 						<div class="hourly-temp">
 							<span class="hourly-temp-is">27°C</span>
-							<div class="hourly-temp-candle-box">
-								<div style="height: 54%;" class="hourly-temp-candle"></div>
+							<div class="hourly-icon-box">
+								<img class="hourly-icon" src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
 							</div>
 							<span class="hourly-temp-hour-is">16:00</span>
+ 							<div class="hourly-rain">
+								<img class="rain-chance-drop" alt="Water drop icon. Represents rain chance." src="../weather_dashboard/src/icons/light-theme-icons/humid.svg"/>
+								<span class="hourly-rain-digit">0%</span>
+							</div>
 						</div>
 						<div class="hourly-temp">
 							<span class="hourly-temp-is">24°C</span>
-							<div class="hourly-temp-candle-box">
-								<div style="height: 48%;" class="hourly-temp-candle"></div>
+							<div class="hourly-icon-box">
+								<img class="hourly-icon" src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
 							</div>
 							<span class="hourly-temp-hour-is">17:00</span>
+ 							<div class="hourly-rain">
+								<img class="rain-chance-drop" alt="Water drop icon. Represents rain chance." src="../weather_dashboard/src/icons/light-theme-icons/humid.svg"/>
+								<span class="hourly-rain-digit">0%</span>
+							</div>
 						</div>
 						<div class="hourly-temp">
 							<span class="hourly-temp-is">23°C</span>
-							<div class="hourly-temp-candle-box">
-								<div style="height: 46%;" class="hourly-temp-candle"></div>
+							<div class="hourly-icon-box">
+								<img class="hourly-icon" src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
 							</div>
 							<span class="hourly-temp-hour-is">18:00</span>
+ 							<div class="hourly-rain">
+								<img class="rain-chance-drop" alt="Water drop icon. Represents rain chance." src="../weather_dashboard/src/icons/light-theme-icons/humid.svg"/>
+								<span class="hourly-rain-digit">0%</span>
+							</div>
 						</div>
 						<div class="hourly-temp">
 							<span class="hourly-temp-is">23°C</span>
-							<div class="hourly-temp-candle-box">
-								<div style="height: 46%;" class="hourly-temp-candle"></div>
+							<div class="hourly-icon-box">
+								<img class="hourly-icon" src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>				
 							</div>
 							<span class="hourly-temp-hour-is">19:00</span>
+ 							<div class="hourly-rain">
+								<img class="rain-chance-drop" alt="Water drop icon. Represents rain chance." src="../weather_dashboard/src/icons/light-theme-icons/humid.svg"/>
+								<span class="hourly-rain-digit">0%</span>
+							</div>
 						</div>
 						<div class="hourly-temp">
 							<span class="hourly-temp-is">22°C</span>
-							<div class="hourly-temp-candle-box">
-								<div style="height: 44%;" class="hourly-temp-candle"></div>
+							<div class="hourly-icon-box">
+								<img class="hourly-icon" src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
 							</div>
 							<span class="hourly-temp-hour-is">20:00</span>
+ 							<div class="hourly-rain">
+								<img class="rain-chance-drop" alt="Water drop icon. Represents rain chance." src="../weather_dashboard/src/icons/light-theme-icons/humid.svg"/>
+								<span class="hourly-rain-digit">0%</span>
+							</div>
 						</div>
 						<div class="hourly-temp">
 							<span class="hourly-temp-is">-20°C</span>
-							<div class="hourly-temp-candle-box temp-is-below-zero">
-								<div style="height: 40%;" class="hourly-temp-candle"></div>
+							<div class="hourly-icon-box">
+								<img class="hourly-icon" src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
 							</div>
 							<span class="hourly-temp-hour-is">21:00</span>
+ 							<div class="hourly-rain">
+								<img class="rain-chance-drop" alt="Water drop icon. Represents rain chance." src="../weather_dashboard/src/icons/light-theme-icons/humid.svg"/>
+								<span class="hourly-rain-digit">0%</span>
+							</div>
+						</div>
+						<div class="hourly-temp">
+							<span class="hourly-temp-is">-20°C</span>
+							<div class="hourly-icon-box">
+								<img class="hourly-icon" src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
+							</div>
+							<span class="hourly-temp-hour-is">22:00</span>
+ 							<div class="hourly-rain">
+								<img class="rain-chance-drop" alt="Water drop icon. Represents rain chance." src="../weather_dashboard/src/icons/light-theme-icons/humid.svg"/>
+								<span class="hourly-rain-digit">0%</span>
+							</div>
+						</div>
+						<div class="hourly-temp">
+							<span class="hourly-temp-is">-20°C</span>
+							<div class="hourly-icon-box">
+								<img class="hourly-icon" src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
+							</div>
+							<span class="hourly-temp-hour-is">23:00</span>
+ 							<div class="hourly-rain">
+								<img class="rain-chance-drop" alt="Water drop icon. Represents rain chance." src="../weather_dashboard/src/icons/light-theme-icons/humid.svg"/>
+								<span class="hourly-rain-digit">0%</span>
+							</div>
+						</div>
+						<div class="hourly-temp">
+							<span class="hourly-temp-is">-20°C</span>
+							<div class="hourly-icon-box">
+								<img class="hourly-icon" src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
+							</div>
+							<span class="hourly-temp-hour-is">00:00</span>
+ 							<div class="hourly-rain">
+								<img class="rain-chance-drop" alt="Water drop icon. Represents rain chance." src="../weather_dashboard/src/icons/light-theme-icons/humid.svg"/>
+								<span class="hourly-rain-digit">0%</span>
+							</div>
+						</div>
+						<div class="hourly-temp">
+							<span class="hourly-temp-is">-20°C</span>
+							<div class="hourly-icon-box">
+								<img class="hourly-icon" src="../weather_dashboard/src/icons/light-theme-icons/less-cloudy.svg"/>
+							</div>
+							<span class="hourly-temp-hour-is">01:00</span>
+ 							<div class="hourly-rain">
+								<img class="rain-chance-drop" alt="Water drop icon. Represents rain chance." src="../weather_dashboard/src/icons/light-theme-icons/humid.svg"/>
+								<span class="hourly-rain-digit">0%</span>
+							</div>
 						</div>
 						<div id="hourly-temp-graph-x-axis-line">
 					</div>
 				</div>
-
 				<div id="current-temp-basic-data-grid">
 					<img id="current-weather-icon" alt="Weather icon." src="../weather_dashboard/src/icons/light-theme-icons/sunny.svg"/>
 					<span id="current-temp-digit">25°C</span>
 					<span id="chances-of-rain">Chance of rain: 43%</span>
 				</div>
 			</div>
-			<button type="button" id="back-button-temp" class="back-button has-border">
+			<button type="button" title="Go back." id="back-button-temp" class="back-button has-border">
 				<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-theme-icons/light-theme-left-arrow.svg"/>
 			</button>
-			<div title="Click for more information about this tile." class="more-info-icon has-border">i</div>
+			<div title="Click for more information about this weather in the next 12 hours." class="more-info-icon has-border">i</div>
 			</div>
 
 <!--Date and time tile-->
@@ -203,42 +276,26 @@
 
 <!--Wind tile component-->
 			<!--other-data-graph-closed or other-data-graph-open-->
-			<div id="wind-tile" class="other-tile has-border other-data-graph-closed">
-				<button type="button" id="back-button-wind" class="back-button has-border">
+			<div id="wind-tile" class="other-tile has-border other-data-graph-open">
+				<span id="hourly-temp-title" class="open-graph-title">Showing the wind speed for the next 6 hours</span>
+				<button type="button" title="Go back." id="back-button-wind" class="back-button has-border">
 					<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-theme-icons/light-theme-left-arrow.svg"/>
 				</button>
 				<div id="wind-graph" class="weather-graph">
-					<div class="wind-speed-column has-border">
-						<span class="wind-speed-will-be wind-graph-digits">5.0</span>
-					<div class="wind-speed-index"></div>
-						<span class="wind-hour-is wind-graph-digits">00:00</span>
+					<div class="wind-hour-box">
+						<span class="wind-hour-speed">5 km/h</span>
+						<div class="wind-compass">
+							<span class="north compass-direction">N</span>
+							<span class="west compass-direction">W</span>
+							<span class="south compass-direction">S</span>
+							<span class="east compass-direction">E</span>
+							<div class="compass-arrow">
+								<div class="arrow-head"></div>
+								<div class="arrow-tail"></div>
+							</div>
+						</div>
+						<span class="wind-hour-hour">14:00</span>
 					</div>
-					<div class="wind-speed-column has-border">
-						<span class="wind-speed-will-be wind-graph-digits">5.0</span>
-					<div class="wind-speed-index"></div>
-						<span class="wind-hour-is wind-graph-digits">00:00</span>
-					</div>
-					<div class="wind-speed-column has-border">
-						<span class="wind-speed-will-be wind-graph-digits">5.0</span>
-					<div class="wind-speed-index"></div>
-						<span class="wind-hour-is wind-graph-digits">00:00</span>
-					</div>
-					<div class="wind-speed-column has-border">
-						<span class="wind-speed-will-be wind-graph-digits">5.0</span>
-					<div class="wind-speed-index"></div>
-						<span class="wind-hour-is wind-graph-digits">00:00</span>
-					</div>
-					<div class="wind-speed-column has-border">
-						<span class="wind-speed-will-be wind-graph-digits">5.0</span>
-					<div class="wind-speed-index"></div>
-						<span class="wind-hour-is wind-graph-digits">00:00</span>
-					</div>
-					<div class="wind-speed-column has-border">
-						<span class="wind-speed-will-be wind-graph-digits">5.0</span>
-					<div class="wind-speed-index"></div>
-						<span class="wind-hour-is wind-graph-digits">00:00</span>
-					</div>
-					<div id="wind-graph-x-axis-line"></div>
 				</div>
 				<div id="current-wind-speed-data" class="other-weather-data-basic-data-wrapper">
 					<div class="value-unit-wrapper">
