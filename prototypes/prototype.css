@@ -87,7 +87,7 @@ span {
 
 .back-button {
 	background-color: var(--main-color);
-	display: none;
+	display: block;
 	height: 30px;
 	left: 5px;
 	position: absolute;
@@ -222,9 +222,10 @@ span {
 	cursor: default;
 }
 
-#current-temp-tile.graph-open #back-button-temp
+.graph-closed .back-button
 {
-	display: block;
+	transform: scale(0);
+	pointer-events: none;
 }
 
 #current-temp-tile.graph-open .more-info-icon
@@ -546,6 +547,9 @@ span {
 
 #the-next-five-days-title {
 	border-bottom-style: solid;
+	position: sticky;
+	top: 0;
+	background-color: var(--secondary-color);
 }
 
 .day-plus-day-of-the-week-is::before {
@@ -558,6 +562,11 @@ span {
 	display: grid;
 	grid-template-areas: "a b""c d";
 	position: relative;
+}
+
+#other-weather-data-wrapper *
+{
+	transition: 300ms;
 }
 
 .other-tile-bar {
@@ -1026,8 +1035,8 @@ span {
 }
 
 .day-plus-icon {
-	height: auto;
-	width: 30px;
+	height: 28px;
+	width: auto;
 }
 
 .day-plus-max-temp {
