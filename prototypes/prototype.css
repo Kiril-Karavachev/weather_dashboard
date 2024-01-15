@@ -483,7 +483,7 @@ span {
 }
 
 .search-result-line {
-	border: solid 0.5px var(--main-color);
+	border-bottom: solid 0.5px var(--main-color);
 	cursor: pointer;
 	display: block;
 	font-size: 14px;
@@ -493,6 +493,11 @@ span {
 	-webkit-user-select: none;
 	user-select: none;
 	width: 100%;
+}
+
+.search-result-line:last-of-type
+{
+	border: none !important;
 }
 
 .search-result-line:hover {
