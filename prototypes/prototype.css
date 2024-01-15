@@ -274,7 +274,7 @@ span {
 	color: var(--secondary-color);
 }
 
-.graph-open #switch-units
+.graph-open .switch-mode-button
 {
 	transform: scale(0);
 }
@@ -420,6 +420,33 @@ span {
 {
 	width: auto;
 	height: 80%;
+}
+
+/*Date and time tile-----------------------------------------------------------------------*/
+
+#date-and-time-tile
+{
+	position: relative;
+}
+
+#switch-hour-mode
+{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	width: fit-content;
+	height: 30px;
+	padding: 5px;
+	font-size: 12px;
+	background: var(--main-color);
+	color: var(--secondary-color);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 2px;
+	border-radius: 20px 0px 20px 20px;
+	
 }
 
 /*Search bar component--------------------------------------------------------------------*/
@@ -1632,7 +1659,7 @@ span {
 #sun-or-moon-path {
 	grid-area: c;
 	height: 20px;
-	width: 283px;
+	width: 95%;
 }
 
 #sun-or-moon-icon {
