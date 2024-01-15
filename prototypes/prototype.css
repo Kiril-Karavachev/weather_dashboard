@@ -86,7 +86,7 @@ span {
 }
 
 .back-button {
-	background-color: var(--main-color);
+	background-color: var(--secondary-color);
 	display: block;
 	height: 30px;
 	left: 5px;
@@ -287,7 +287,7 @@ span {
 	border-radius: 20px;
 	display: flex;
 	flex-direction: row;
-	gap: 20px;
+	/* gap: 20px; */
 	height: 100%;
 	left: 0;
 	position: absolute;
@@ -298,7 +298,8 @@ span {
 }
 
 #temp-graph-scroll-box::-webkit-scrollbar-thumb {
-	background: var(--main-color);
+	background: var(--secondary-color);
+	border: solid 1px var(--main-color);
 	border-radius: 10px;
 }
 
@@ -308,12 +309,20 @@ span {
 
 .hourly-temp
 {
-	width: 50px;
+	position: relative;
+	min-width: 100px;
 	height: 80px;
 	display: grid;
 	grid-template-areas: "a" "b" "c" "d";
 	grid-template-rows: 15px 35px 15px 15px;
 	gap: 5px;
+	border-right: dotted 1px var(--main-color);
+	padding: 0px 10px 0px 10px;
+}
+
+.hourly-temp:last-of-type
+{
+	border-right: none !important;
 }
 
 .hourly-temp > *
@@ -552,8 +561,35 @@ span {
 	background-color: var(--secondary-color);
 }
 
+.day-plus-wrapper *
+{
+	font-size: 12px;
+}
+
 .day-plus-day-of-the-week-is::before {
 	content: "\00a0";
+}
+
+.day-plus-icon{
+	height: 20px;
+	width: auto;
+}
+
+.day-plus-max-temp,
+.day-plus-rain-drop,
+.day-plus-day-and-month-are
+{
+	margin-left: 10px;
+}
+
+.day-plus-rain-drop {
+	height: 14px;
+}
+
+.day-plus-rain-chance-number
+{
+	margin-left: 5px;
+	border-right: dotted 1px var(--main-color);
 }
 
 /*Other weather data component------------------------------------------------------------*/
@@ -621,7 +657,8 @@ span {
 }
 
 .weather-graph::-webkit-scrollbar-thumb {
-	background: var(--main-color);
+	background: var(--secondary-color);
+	border: solid 1px var(--main-color);
 	border-radius: 10px;
 }
 
@@ -634,7 +671,7 @@ span {
 }
 
 .other-weather-data-basic-data-wrapper {
-	transform: translateY(40%);
+	/* transform: translateY(40%); */
 }
 
 .other-weather-data-basic-data-wrapper {
@@ -648,12 +685,38 @@ span {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	position: relative;
 	z-index: 2;
 }
 
 .other-data-tile-title {
 	display: block;
+}
+
+.other-data-tile-warning
+{
+	position: absolute;
+	font-size: 10px;
+	bottom: 5px;
+	width: 60%;
+	left: 20%;
+	min-width: fit-content;
+	text-align: center;
+	transform: scale(0);
+	background-color: var(--main-color);
+	color: var(--secondary-color);
+	border-radius: 20px 20px 0px 0px;
+}
+
+.other-data-tile-warning.warning
+{
+	transform: scale(1);
+}
+
+.graph-open .other-data-tile-warning
+{
+	display: none;
 }
 
 /*Wind tile component---------------------------------------------------------------------*/
@@ -666,7 +729,6 @@ span {
 	align-items: center;
 	display: flex;
 	flex-direction: row;
-	gap: 35px;
 	padding-left: 10px;
 }
 
@@ -681,7 +743,13 @@ span {
 	grid-template-areas: "a" "b" "c";
 	gap: 20px;
 	overflow: visible;
-	min-width: 50px;
+	min-width: 100px;
+	border-right: dotted 1px var(--main-color);
+}
+
+.wind-hour-box:last-of-type
+{
+	border-right: none !important;
 }
 
 .wind-hour-box > *
@@ -784,7 +852,7 @@ span {
 }
 
 .go-north{
-	transform: rotate(90deg);
+	transform: rotate(0deg);
 }
 
 .go-north-west{
@@ -867,7 +935,7 @@ span {
 	max-width: 920px !important;
 	min-height: 608.35px;
 	min-width: 920px;
-	top: 20px;
+	top: calc((100% - 608.35px)/2);
 }
 
 /*Current temperature and current date and time-------------------------------------------*/
@@ -1022,34 +1090,50 @@ span {
 	height: 38px;
 	margin-bottom: 14px;
 	margin-top: 5px;
-	width: 450px;
+	width: 445px;
 }
 
 .day-plus-wrapper {
 	height: 43px;
-	width: 450.09px;
+	width: 445px;
 }
 
-.day-plus-wrapper .day-plus-max-temp, .day-plus-wrapper .day-plus-day-and-month-are {
-	margin-left: 15px;
-}
-
-.day-plus-icon {
-	height: 28px;
-	width: auto;
-}
-
-.day-plus-max-temp {
-	font-size: 24px;
-}
-
-.day-plus-min-temp, .day-plus-day-and-month-are {
-	font-size: 18px;
-}
-
-.day-plus-day-of-the-week-is {
+.day-plus-wrapper *
+{
 	font-size: 16px;
 }
+
+.day-plus-rain-drop {
+	height: 16px;
+}
+
+.day-plus-max-temp,
+.day-plus-rain-drop,
+.day-plus-day-and-month-are
+{
+	margin-left: 20px;
+}
+
+.day-plus-max-temp
+{
+	min-width: 45px;
+}
+
+.day-plus-min-temp
+{
+	min-width: 35px;
+}
+
+.day-plus-rain-chance-number
+{
+	min-width: 40px;
+}
+
+.day-plus-day-and-month-are
+{
+	min-width: 65px;
+}
+
 
 /*Other weather data component------------------------------------------------------------*/
 
@@ -1264,35 +1348,34 @@ span {
 
 #the-next-five-days-title, .day-plus-wrapper {
 	height: 34px;
-	width: 324px;
+	width: 315px;
 }
 
 #the-next-five-days-title {
 	min-height: 35px !important;
 }
 
-.day-plus-icon {
-	height: auto;
-	width: 35px;
+
+.day-plus-max-temp
+{
+	min-width: 35px;
 }
 
-.day-plus-max-temp {
-	font-size: 18px;
-	margin-left: 15px;
+.day-plus-min-temp
+{
+	min-width: 25px;
 }
 
-.day-plus-min-temp {
-	font-size: 14px;
+.day-plus-rain-chance-number
+{
+	min-width: 30px;
 }
 
-.day-plus-day-and-month-are {
-	font-size: 16px;
-	margin-left: 15px;
+.day-plus-day-and-month-are
+{
+	min-width: 45px;
 }
 
-.day-plus-day-of-the-week-is {
-	font-size: 14px;
-}
 
 /*Other weather data component------------------------------------------------------------*/
 
@@ -1531,34 +1614,31 @@ span {
 
 #the-next-five-days-title, .day-plus-wrapper {
 	height: 39px;
-	width: 319px;
+	width: 315px;
 }
 
 #the-next-five-days-title {
 	min-height: 36px !important;
 }
 
-.day-plus-icon {
-	height: auto;
-	width: 30px;
+.day-plus-max-temp
+{
+	min-width: 35px;
 }
 
-.day-plus-max-temp {
-	font-size: 18px;
-	margin-left: 15px;
+.day-plus-min-temp
+{
+	min-width: 25px;
 }
 
-.day-plus-min-temp {
-	font-size: 14px;
+.day-plus-rain-chance-number
+{
+	min-width: 30px;
 }
 
-.day-plus-day-and-month-are {
-	font-size: 16px;
-	margin-left: 15px;
-}
-
-.day-plus-day-of-the-week-is {
-	font-size: 14px;
+.day-plus-day-and-month-are
+{
+	min-width: 45px;
 }
 
 /*Other weather data component------------------------------------------------------------*/
