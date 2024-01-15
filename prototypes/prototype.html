@@ -200,13 +200,22 @@
 
 		<section id="search-bar-wrapper" class="main-grid-item">
 			<input id="search-location-bar" class="has-border" type="text" placeholder="Search location..."/>
-			<div id="search-drop-down-menu-wrapper" class="drop-down-closed has-border">
+			<div id="search-drop-down-menu-wrapper" class="has-border">
 				<span class="search-result-line">Sofia, Bulgaria</span>
 				<span class="search-result-line">Other, Country</span>
 				<span class="search-result-line">Other, Country</span>
 				<span class="search-result-line">Other, Country</span>
 				<span class="search-result-line">Other, Country</span>
 			</div>
+			<script>
+				const search_bar = document.getElementById('search-location-bar');
+				const searchFocus = (open) => {
+					const search_menu = document.getElementById('search-drop-down-menu-wrapper');
+					search_menu.classList[`${open ? 'add' : 'remove'}`]('drop-down-open');
+				};
+				search_bar.addEventListener('focus', () => searchFocus(true));
+				search_bar.addEventListener('focusout', () => searchFocus(false));
+			</script>
 		</section>
 
 <!--Current location and theme selector-->
@@ -411,6 +420,7 @@
 						<span id="uv-tile-title" class="other-data-tile-title">UV</span>
 					</div>
 				</div>
+				<span class="other-data-tile-warning warning">Warning!</span>
 			</div>
 
 <!--Humidity tile component-->
@@ -424,6 +434,7 @@
 					<span id="humidity-tile-title" class="other-data-tile-title">Humidity</span>
 				</div>
 				</div>
+				<span class="other-data-tile-warning warning">Warning!</span>
 			</div>
 
 <!--Visibility tile component-->
@@ -434,7 +445,8 @@
 					<span id="current-visibility-units" class="other-weather-data-units">km</span>
 					<span id="visibility-tile-title" class="other-data-tile-title">Visibility</span>
 				</div>
-				</div>			
+				</div>
+				<span class="other-data-tile-warning warning">Warning!</span>			
 			</div>
 		</section>
 	</main>
