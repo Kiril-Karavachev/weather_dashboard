@@ -181,7 +181,7 @@
 				<img class="back-button-arrow" alt="Back button arrow." src="../weather_dashboard/src/icons/light-theme-icons/light-theme-left-arrow.svg"/>
 			</button>
 			<div title="Find more information about the weather for the next hours." class="more-info-icon">&bull; &bull; &bull;</div>
-			<button id="switch-units" class="has-border" type="button" title="Switch units (imperial or metric)."><i class="material-icons" id="switch-units-icon">sync</i> °F, mph</button>	
+			<button id="switch-units" class="has-border switch-mode-button" type="button" title="Switch units (imperial or metric)."><i class="material-icons" id="switch-units-icon">sync</i> °F, mph</button>	
 		</div>
 
 <!--Date and time tile-->
@@ -193,6 +193,7 @@
 					<span id="current-year" class="date-data-to-the-left">2024</span>
 					<span id="current-time" class="date-data-to-the-right">13:16</span>
 				</div>
+				<button id="switch-hour-mode" class="has-border switch-mode-button" type="button" title="Switch hour format (24 or 12)."><i class="material-icons" id="switch-units-icon">sync</i>12h mode</button>
 			</div>
 		</section>
 
@@ -405,7 +406,7 @@
 						<span id="wind-tile-title" class="other-data-tile-title">Wind</span>
 					</div>
 				</div>
-				<span class="other-data-tile-warning warning">Warning!</span>
+				<span class="other-data-tile-warning warning">Light</span>
 				<div title="Find more information about the wind in the next hours." class="more-info-icon">&bull; &bull; &bull;</div>
 			</div>
 
@@ -420,7 +421,7 @@
 						<span id="uv-tile-title" class="other-data-tile-title">UV</span>
 					</div>
 				</div>
-				<span class="other-data-tile-warning warning">Warning!</span>
+				<span class="other-data-tile-warning warning">Moderate</span>
 			</div>
 
 <!--Humidity tile component-->
@@ -434,7 +435,7 @@
 					<span id="humidity-tile-title" class="other-data-tile-title">Humidity</span>
 				</div>
 				</div>
-				<span class="other-data-tile-warning warning">Warning!</span>
+				<span class="other-data-tile-warning warning">Very High</span>
 			</div>
 
 <!--Visibility tile component-->
@@ -446,7 +447,7 @@
 					<span id="visibility-tile-title" class="other-data-tile-title">Visibility</span>
 				</div>
 				</div>
-				<span class="other-data-tile-warning warning">Warning!</span>			
+				<span class="other-data-tile-warning warning">Moderate</span>			
 			</div>
 		</section>
 	</main>
