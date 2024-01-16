@@ -86,7 +86,7 @@ span {
 }
 
 .back-button {
-	background-color: var(--secondary-color);
+	background-color: transparent;
 	display: block;
 	height: 30px;
 	left: 5px;
